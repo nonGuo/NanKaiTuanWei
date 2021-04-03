@@ -1,0 +1,22 @@
+page{
+  background-image:url(https://image.potatofield.cn/picturepuzzle/purple.jpg) 
+}
+.headLine{
+  text-align: center;
+  margin-top: 140rpx;
+  color: white
+}
+.imageStyle{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 87.5rpx;
+  margin-right: 87.5rpx;
+  margin-top: 50rpx;
+  border-radius: 10px
+}
+.imageContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}

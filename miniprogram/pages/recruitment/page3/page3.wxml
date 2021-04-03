@@ -1,0 +1,10 @@
+<!--pages/recruitment/page3.wxml-->
+<view class="mid">
+  <view class='container' >
+    <text style='color:white'>古言道：读万卷书，行万里路。在书海驰骋千年的同时，我们也渴望去看看更广阔的现实世界，无论走到哪里，我们都会将旅行中的点滴记录，转化成深刻而丰富的人生阅历，那么，平时的你是讨厌宅在家里，喜欢经常选择出行的追风少年吗？</text>
+  </view>
+  <view class='container row-flex'>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='showyes'>Yes</button>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='next'>No</button>
+  </view>
+</view>

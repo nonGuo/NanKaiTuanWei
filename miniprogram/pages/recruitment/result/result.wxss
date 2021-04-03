@@ -1,0 +1,20 @@
+/* pages/recruitment/result/result.wxss */
+.purple{
+color:#c543b6;
+}
+
+.mid{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+  height: 500px;
+}
+
+page {
+  background-image: url(https://image.potatofield.cn/recruitment/recruitment_blank.jpg)
+}
+
+.button-text-center {
+  text-align: center;
+}

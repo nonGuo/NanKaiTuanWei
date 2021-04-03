@@ -1,0 +1,10 @@
+<!--pages/recruitment/page2/page2.wxml-->
+<view class="mid">
+  <view class='container' >
+    <text style='color:white'>众所周知，南开作为一所老牌名校，人才辈出，最著名的当属周恩来总理，他那句“为中华之崛起而读书”至今被每一位中国学子铭记，从一百年前的誓言到如今祖国的飞黄腾达，这段历史同样离不开南开学子的不懈努力奋斗，那么，你尝试了解过中国历史或者南开校史吗？</text>
+  </view>
+  <view class='container row-flex'>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='showyes'>Yes</button>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='next'>No</button>
+  </view>
+</view>

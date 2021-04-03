@@ -1,0 +1,28 @@
+.wish {
+  box-sizing: border-box;
+  padding: 30rpx;
+  width: 100%;
+  height: 200rpx;
+  border-radius: 40rpx;
+  color: #000000;
+  background: #ffffff;
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
+  height: 40vw;
+}
+
+page {
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  background-image: url(https://image.potatofield.cn/Nankai100/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}

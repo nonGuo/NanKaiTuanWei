@@ -1,0 +1,6 @@
+/* pages/Hello2021/Hello2021.wxss */
+.col-center{
+  display: flex;
+  align-items: center;
+  height: 80vh;
+}

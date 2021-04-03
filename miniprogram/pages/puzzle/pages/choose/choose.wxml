@@ -1,0 +1,7 @@
+<!--pages/choose/choose.wxml-->
+<view class="headLine">选择图片</view>
+<view class="imageContainer">
+  <view wx:for='{{img}}'>
+    <image class='imageStyle' src="{{item.address}}" bindtap="choose" id="{{item.id}}"></image>
+  </view>
+</view>

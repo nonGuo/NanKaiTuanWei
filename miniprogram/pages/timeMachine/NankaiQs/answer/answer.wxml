@@ -1,0 +1,48 @@
+<view class='container'>
+  <view class='content question'>
+    <text>{{page + 1}}. {{currentQuestion}}</text>
+  </view>
+</view>
+<radio-group bindchange='radioChange'>
+  <view class='container'>
+    <label class='content'>
+      <radio value='A' class='radio' checked='{{checked}}' disabled="{{clickTwice==true}}"></radio>
+      <text class='text-color'>{{currentSelectA}}</text>
+    </label>
+  </view>
+  <view class='container'>
+    <label class='content'>
+      <radio value='B' class='radio' checked='{{checked}}' disabled="{{clickTwice==true}}"></radio>
+      <text class='text-color'>{{currentSelectB}}</text>
+    </label>
+  </view>
+  <view class='container'>
+    <label class='content'>
+      <radio value='C' class='radio' checked='{{checked}}' disabled="{{clickTwice==true}}"></radio>
+      <text class='text-color'>{{currentSelectC}}</text>
+    </label>
+  </view>
+  <view class='container'>
+    <label class='content'>
+      <radio value='D' class='radio' checked='{{checked}}' disabled="{{clickTwice==true}}"></radio>
+      <text class='text-color'>{{currentSelectD}}</text>
+    </label>
+  </view>
+  <view class="container" hidden='{{answerHidden}}'>
+    <label class="content">
+      <text style="color: red">该题正确答案是: {{currentRightAnswer}}</text>
+    </label>
+  </view>
+</radio-group>
+<view class='image-mask' hidden='{{showImageMask}}'>
+  <image src='{{answerImagePath}}' class='correct-image'></image>
+</view>
+<view class='container'>
+  <view class='instruction'>
+    <text>当前第{{page + 1}}题，共{{totalPage}}题</text>
+  </view>
+</view>
+<view class='container'>
+  <button class='bar-button' hover-class='bar-button__hover' bindtap='bindNextQuestion' disabled="{{buttonDisabled}}">{{buttonContent}}</button>
+</view>
+<canvas class='poster-canvas' canvas-id='poster'></canvas>

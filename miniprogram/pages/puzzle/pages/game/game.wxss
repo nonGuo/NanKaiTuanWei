@@ -1,0 +1,45 @@
+page{
+  background-image:url(https://image.potatofield.cn/picturepuzzle/purple.jpg) 
+}
+.back{
+  opacity: 0.3;
+  position: absolute;
+  width: 540rpx;
+  height:540rpx;
+  margin-left: 105rpx;
+  margin-top: 150rpx;
+}
+.pic{
+  width: 540rpx;
+  height:540rpx;
+}
+.top{
+  position: absolute;
+  width: 540rpx;
+  height:540rpx;
+  margin-left: 105rpx;
+  margin-top: 150rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.blocks{
+  width: 180rpx;
+  height: 180rpx;
+  overflow: hidden
+}
+.canva{
+  position: absolute;
+  top: 9999px;
+}
+.blockItem{
+  width: 180rpx;
+  height: 180rpx
+}
+.content{
+  margin-left: 300rpx;
+  margin-top: 800rpx;
+  position: absolute;
+  color: white
+}

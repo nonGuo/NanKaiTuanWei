@@ -1,0 +1,10 @@
+<!--pages/recruitment/page5/page5.wxml-->
+<view class="mid">
+  <view class='container'>
+    <text style='color:white'>作为一名新一届的南开学子，我们从小就开始与五彩斑斓的数学世界相遇，在与它相伴的这些年当中，我们不仅学到了知识，更重要的是学到了强大的理性逻辑思维，那么，在平日的生活当中，你是一个经常喜欢大脑风暴的最强大脑候选人吗？</text>
+  </view>
+  <view class='container row-flex'>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='showyes'>Yes</button>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='next'>No</button>
+  </view>
+</view>

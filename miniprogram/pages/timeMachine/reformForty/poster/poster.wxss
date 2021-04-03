@@ -1,0 +1,31 @@
+page {
+  background-image: url(http://image.potatofield.cn/18-11-15/8759091.jpg);
+}
+
+navigator {
+  color: #ff9900;
+}
+
+.bar-button {
+  background-color: #ffcc00;
+}
+
+.bar-button__hover {
+  background-color: #ff9900;
+}
+
+.return-button {
+  background-color: #aaaaaa;
+}
+
+.return-button__hover {
+  background-color: #919191;
+}
+
+.poster {
+  width: 75vw;
+  height: 50vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

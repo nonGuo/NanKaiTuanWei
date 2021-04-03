@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <image src='https://image.potatofield.cn/picturepuzzle/puzzletitle.png' style="width:600rpx;height:400rpx"></image>
+    <button class="bar-button buttons" hover-class="bar-button__hover" style="margin-top:50rpx" bindtap="start">开始游戏</button>
+    <button class="bar-button buttons" hover-class="bar-button__hover" open-type="share">分享</button>
+</view>

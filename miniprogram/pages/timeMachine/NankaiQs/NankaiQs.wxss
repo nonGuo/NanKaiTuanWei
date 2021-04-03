@@ -1,0 +1,28 @@
+page {
+  background-image: url(https://image.potatofield.cn/NankaiQs/NankaiQsback.png);
+}
+
+navigator {
+  color: #7a0c6e;
+}
+
+.logo {
+  width: 60vw;
+  height: 40vw;
+}
+
+.bar-button {
+  background-color: #7a0c6e;
+}
+
+.bar-button__hover {
+  background-color: #7a0c6e;
+}
+
+.return-button {
+  background-color: #aaaaaa;
+}
+
+.return-button__hover {
+  background-color: #919191;
+}

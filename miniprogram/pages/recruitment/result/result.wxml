@@ -1,0 +1,106 @@
+<!--pages/recruitment/result/result.wxml-->
+<view class="mid">
+  <scroll-view scroll-y="true" style="height: 400px;">
+    <view class='container'>
+      <text style='color:white' hidden='{{texthide[0]}}'>看来你和我们一样对南小开爱得如此深沉，为了表示我们的爱意，在过去的一年里，我们推出了<text class='purple'>百年校庆打卡</text>，<text class='purple'>专属你的南开头像生成器</text>，<text class='purple'>九九南开等一个你</text>等精彩而又丰富的小程序，在这里我们将记录与南开的一点一滴，让这份爱永存。</text>
+    </view>
+    <view class='container' hidden='{{texthide[0]}}'>
+      <button class='block-button' bindtap='gotoNankai100'>
+        <image class='button-image' src='https://image.potatofield.cn/Nankai100/share.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container' hidden='{{texthide[0]}}'>
+      <button class='block-button' bindtap='gotoAvatarCreator'>
+        <image class='button-image' src='http://image.potatofield.cn/18-10-27/9492853.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container' hidden='{{texthide[0]}}'>
+      <button class='block-button' bindtap='gotoNinetyNine'>
+        <image class='button-image' src='http://image.potatofield.cn/18-10-27/95144105.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+    <text style='color:white' hidden='{{texthide[1]}}'>看来你和我们一样，喜欢饱读书籍，了解历史，在过去的一年里，我们推出了<text class='purple'>不负先贤，砥砺前行</text>的清明节特别小程序，来回忆过去的历史，怀念伟大的先人，同样推出了<text class='purple'>改革开放知多少</text>这样趣味历史程序，在这里我们缅怀过去，铭记历史，在时代的发展中回头眺望，不忘初心，继续前行。</text>
+    </view>
+    <view class='container' hidden='{{texthide[1]}}'>
+      <button class='block-button' bindtap='gotoQingming'>
+        <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container' hidden='{{texthide[1]}}'>
+      <button class='block-button' bindtap='gotoReformForty'>
+        <image class='button-image' src='http://image.potatofield.cn/18-11-14/8563060.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+    <text style='color:white' hidden='{{texthide[2]}}'>看来你和我们一样，喜欢做追风少年，喜欢勇闯天涯，走遍世界，正因如此，在过去的一年里，我们推出了五一节特别小程序，<text class='purple'>五一去哪儿</text>，在这个程序里，我们给每个同学个性定制专属的出游路线，让大家不再为攻略感到头大，尽请享受美好时光。</text>
+    </view>
+    <view class='container' hidden='{{texthide[2]}}'>
+      <button class='block-button' bindtap='gotoLaborDay2019'>
+        <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.png'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+    <text style='color:white' hidden='{{texthide[3]}}'>看来你和我们一样，喜欢在艺术的世界里放飞自我，在过去的一年里，我们推出了<text class='purple'>我与南开弹恋爱</text>的趣味小程序，线上自己弹奏南开校歌，用音乐表达自己，也推出了<text class='purple'>荷花节邀请函</text>这样与参加南开第六届荷花节相关的小程序，我们用技术，将艺术与科技结合，带领大家领略了不同的艺术精彩。</text>
+    </view>
+    <view class='container' hidden='{{texthide[3]}}'>
+      <button class='block-button' bindtap='gotoLoveNankai'>
+        <image class='button-image' src='http://image.potatofield.cn/18-10-30/56121876.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container' hidden='{{texthide[3]}}'>
+      <button class='block-button' bindtap='gotoLotus'>
+        <image class='button-image' src='http://image.potatofield.cn/18-10-28/73068552.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+    <text style='color:white' hidden='{{texthide[4]}}'>看来你和我们一样，喜欢探索逻辑的奥秘，喜欢头脑冲浪，在过去的一年里，我们推出了<text class='purple'>南开华容道</text>这样的游戏小程序，让大家能够尽情在游戏中领略思维高度旋转的魔力，一步步提升自我逻辑，不断挑战自我，收获成功。</text>
+    </view>
+    <!-- <view class='container'>   好像没找到
+    </view> -->
+    <view class='container' hidden='{{texthide[4]}}'>
+      <button class='block-button' bindtap='gotoHuarongdao'>
+        <image class='button-image' src='http://image.potatofield.cn/18-11-14/10587524.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+    <text style='color:white' hidden='{{texthide[5]}}'>看来你和我们一样，喜欢充满希望并且好运爆表，在过去的一年里，我们推出了新年之际的特别程序<text class='purple'>许愿2019</text>用来记录你满满的新年希望，同样也推出了<text class='purple'>抽奖抽签小助手</text>来让你的好运大显身手，做一回令人羡慕的南开专属锦鲤。</text>
+    </view>
+    <view class='container' hidden='{{texthide[5]}}'>
+      <button class='block-button' bindtap='gotoFlagNineteen'>
+        <image class='button-image' src='http://image.potatofield.cn/18-11-14/10587524.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container' hidden='{{texthide[5]}}'>
+      <button class='block-button' bindtap='gotoLottery'>
+        <image class='button-image' src='http://image.potatofield.cn/18-11-21/4426294.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+    <text style='color:white' hidden='{{texthide[6]}}'>虽然你和我们心目中的形象有一点点偏差，但是既然你完成了测试......</text>
+    </view>
+    <view>
+        <button class='bar-button' hover-class='bar-button__hover' bindtap='gotoTimeMachine' style="width:80%">查看更多小程序</button>
+    </view>
+    <view class='container row-flex'>
+      <view class='half'>
+        <navigator class='bar-button button-text-center' hover-class='bar-button__hover' open-type='navigateTo' 
+        target="miniProgram" bindtap='join'>加入我们</navigator>
+      </view>
+      <view class='half'>
+        <button class='bar-button' hover-class='bar-button__hover' bindtap='exit'>残忍拒绝</button>
+      </view>
+    </view>
+  </scroll-view>
+</view>

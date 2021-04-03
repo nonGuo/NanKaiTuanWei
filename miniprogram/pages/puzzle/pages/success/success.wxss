@@ -1,0 +1,8 @@
+page{
+  background-image:url(https://image.potatofield.cn/picturepuzzle/purple.jpg) 
+}
+.words{
+  margin-top: 30rpx;
+  text-align:center;
+  color: white
+}

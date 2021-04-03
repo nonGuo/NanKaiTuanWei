@@ -1,0 +1,61 @@
+<!--pages/calender/calender.wxml-->
+<view class='header'>
+  <text class="iconfont" data-id="0" bindtap='seletemonth'>
+    <text class='left'></text>
+  </text>
+  <view class='purple'>{{monthname[seleted.month]}}</view>
+  <view>{{seleted.year}}</view>
+  <text class="iconfont" data-id="1" bindtap='seletemonth'>
+    <text class='right'></text> 
+  </text>
+</view>
+<view class='calendar-head'>
+  <view wx:for="{{head}}" class='calendar-head-week'>{{item}}</view>
+</view>
+<view class="calendar-body">
+  <block wx:for="{{calender}}">
+    <view class="calender-body-date-week {{seleted.month==item.month? '':'othermonth'}} {{chosen==item.date?'choose':''}}" bindtap='toggleDialog' data-id='{{item.i}}' data-day='{{item.date}}'>
+      <block wx:if="{{item.checked}}">
+        <image class='check' mode='widthFix' src='{{checkImage}}' ></image>
+      </block>
+      {{item.date}}
+      </view>
+  </block>
+</view>
+<view class='subtitle'>
+  <text>累计打卡{{num}}天</text>
+</view>
+<view class='container row-flex'>
+  <view class='half'>
+    <button class='bar-button' hover-class='bar-button__hover' bindtap='back'>返回</button>
+  </view>
+  <view class='half'>
+    <button class="bar-button {{num>=90?'':'unallow'}}" hover-class='bar-button__hover' open-type="getUserInfo" bindgetuserinfo="createCertificate" disabled='{{createCertificate_button}}'>生成百日证书</button>
+  </view>
+</view>
+<view class='container'>
+  <button class='bar-button' hover-class='bar-button__hover' open-type='share'>分享给朋友</button>
+</view>
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <view class="zan-dialog__mask" bindtap="toggleDialog">
+    <view class="zan-dialog__container">
+      <view style='padding:100rpx;'>
+        <image class='backGround' src='{{background}}'></image>
+        <view class='grey'>{{seleted.month}}月{{chosen}}日</view>
+        <view class='wish'>{{wish}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='image-holder' hidden='{{!showCertificate}}'>
+  <image src='{{imagePath}}' mode="widthFix" class='certificate'></image>
+  <view class='container row-flex'>
+    <view class='half'>
+      <button class='bar-button return-button' hover-class='return-button__hover' bindtap='cancel'>取消保存</button>
+    </view>
+    <view class='half'>
+      <button class='bar-button' hover-class='bar-button__hover' bindtap='save'>保存证书到手机</button>
+    </view>
+  </view>
+</view>
+<canvas class='certificate-canvas' canvas-id='certificateCanvas'></canvas>

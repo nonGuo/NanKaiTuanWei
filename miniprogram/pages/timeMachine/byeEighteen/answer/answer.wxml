@@ -1,0 +1,35 @@
+<view class='container'>
+  <view class='title'>
+    <text>{{categoryTitle}}</text>
+  </view>
+</view>
+<view class='container'>
+  <view class='instruction indent'>
+    <text>{{instruction}}</text>
+  </view>
+</view>
+<view class='container'>
+  <checkbox-group bindchange="checkboxChange">
+    <view wx:for='{{choices}}' wx:key='unique'>
+      <label>
+        <view class='{{checkboxHolderStyles[index]}}'>
+          <view class='subtitle'>
+            <text>{{item.value}}</text>
+          </view>
+          <view class='content indent'>
+            <text>{{item.description}}</text>
+          </view>
+          <view class='{{checkboxTextStyles[index]}}'>
+            <checkbox value='{{index}}' checked='{{isChecked}}'>我参加了</checkbox>
+          </view>
+        </view>
+      </label>
+    </view>
+  </checkbox-group>
+</view>
+
+<view class='container'>
+  <button class='bar-button' hover-class='bar-button__hover' bindtap='next'>{{buttonText}}</button>
+</view>
+
+<canvas class='radar-canvas' canvas-id='radarCanvas'></canvas>

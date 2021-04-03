@@ -1,0 +1,7 @@
+.bg-img{
+  padding: 0.1rpx 0; /* padding为0可能会出现空白  */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  min-height: 100%;
+}

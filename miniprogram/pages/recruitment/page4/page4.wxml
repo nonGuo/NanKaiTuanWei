@@ -1,0 +1,10 @@
+<!--pages/recruitment/page4/page4.wxml-->
+<view class="mid">
+  <view class='container' >
+    <text style='color:white'>学会欣赏艺术是一个人成长中必不可少的技能，无论是看一幅难以忘怀的画作，还是听一支优美动听的乐曲，亦或是闲暇时光里的赏花观柳，充满艺术气息的世界时时刻刻都能陶冶我们的情操，在过去的生活中，你是一个喜欢感受艺术氛围，欣赏甚至尝试艺术创作的同学吗？</text>
+  </view>
+  <view class='container row-flex'>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='showyes'>Yes</button>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='next'>No</button>
+  </view>
+</view>

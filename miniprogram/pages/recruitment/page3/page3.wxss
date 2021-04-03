@@ -1,0 +1,12 @@
+/* pages/recruitment/page3.wxss */
+page {
+  background-image: url(https://image.potatofield.cn/recruitment/recruitment_blank.jpg)
+}
+
+.mid{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+  height: 400px;
+}

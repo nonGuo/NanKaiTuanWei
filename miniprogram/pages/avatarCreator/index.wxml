@@ -1,0 +1,60 @@
+<background image="{{background}}">
+  <view>
+    <view class='container'>
+      <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/logo.jpg'></image>
+    </view>
+    <view class='container'>
+      <view class='title'>南开大学团委服务平台</view>
+      <view class='content center'>
+        <text>Copyright © 2019</text>
+      </view>
+      <view class='content center'>
+        <navigator open-type='redirect' url='/pages/about/about'>南开大学团委网络新媒体运营中心</navigator>
+      </view>
+    </view>
+    <view class='container'>
+      <button class='block-button' bindtap='gotoHello2021'>
+        <image class='button-image' src='https://image.potatofield.cn/Hello2021/cover.png'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+      <button class='block-button' bindtap='gotoNKYearBook'>
+        <image class='button-image' src='https://image.potatofield.cn/NKYearBook/NKYearBook01.png'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+      <button class='block-button' bindtap='gotoPuzzle'>
+        <image class='button-image' src='https://image.potatofield.cn/picturepuzzle/background02.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+      <button class='block-button' bindtap='gotoAvatarCreator'>
+        <image class='button-image' src='http://image.potatofield.cn/18-10-27/9492853.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+      <button class='block-button' bindtap='gotoTimeMachine'>
+        <image class='button-image' src='http://image.potatofield.cn/18-10-27/37330841.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container'>
+      <button class='block-button' bindtap='gotoRecruitment'>
+        <image class='button-image' src='https://image.potatofield.cn/recruitment/recruitment_title.jpg'></image>
+        <view class='button-mask' hover-class='button-mask__hover'></view>
+      </button>
+    </view>
+    <view class='container row-flex'>
+      <view class='half'>
+        <button class='bar-button' hover-class='bar-button__hover' open-type='share'>分享给朋友</button>
+      </view>
+      <view class='half'>
+        <button class='bar-button' hover-class='bar-button__hover' bindtap='actionSheet'>更多操作</button>
+      </view>
+    </view>
+  </view>
+</background>

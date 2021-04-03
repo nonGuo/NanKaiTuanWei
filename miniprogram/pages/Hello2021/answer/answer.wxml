@@ -1,0 +1,43 @@
+<background image="{{background}}">
+  <view class="container">
+    <view class="content">先写下你的名字吧~</view>
+    <input id="name" placeholder="请输入姓名或昵称" bindinput="bindkeyinput" maxlength="6" style="width:600rpx"></input>
+  </view>
+  <view class="container">
+  <view class="content">写下你的第一个目标( ੭ ˙ᗜ˙ )੭</view>
+    <input id="flag1" placeholder="目标1" bindinput="bindkeyinput" maxlength="20"value="{{flag1}}"></input>
+    <button  hover-class="bar-button__hover" bindtap="changeflag1" class="iconfont icon-icon_xiugai"></button>
+  </view>
+
+  <view class="container">
+  <view class="content">写下你的第二个目标( ੭ ˙ᗜ˙ )੭</view>
+    <input id="flag2" placeholder="目标2" bindinput="bindkeyinput" maxlength="20" value="{{flag2}}"></input>
+    <button class="iconfont icon-icon_xiugai" hover-class="bar-button__hover" bindtap="changeflag2"></button>
+  </view>
+
+  <view class="container">
+  <view class="content">写下你的第三个目标( ੭ ˙ᗜ˙ )੭</view>
+    <input id="flag3" placeholder="目标3" bindinput="bindkeyinput" maxlength="20"value="{{flag3}}"></input> 
+    <button class="iconfont icon-icon_xiugai" hover-class="bar-button__hover" bindtap="changeflag3"></button>
+  </view>
+
+  <view class="container row-flex">
+    <view class='half'>
+      <button class='bar-button' hover-class='bar-button__hover' bindtap='prev'>重新选择头像</button>
+    </view>
+    <view class='half'>
+      <button class='bar-button' hover-class='bar-button__hover' bindtap="drawposter">生成图片</button>
+    </view>
+  </view>
+
+  <view class='container'>
+    <view class='copyright'>
+      <text>Copyright © 2020</text>
+    </view>
+    <view class='copyright'>
+      <navigator open-type='redirect' url='/pages/about/about'>南开大学团委网络新媒体运营中心</navigator>
+    </view>
+  </view>
+  <canvas class='poster-canvas' canvas-id='poster'></canvas>
+
+</background>

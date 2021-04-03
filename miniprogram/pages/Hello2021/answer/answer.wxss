@@ -1,0 +1,19 @@
+/* miniprogram/pages/Hello2021/answer/answer.wxss */
+.poster-canvas {
+  width: 1080px;
+  height: 1920px;
+  position: fixed;
+  top: 9999px;
+}
+.change{
+  width: 30%;
+  margin-left: auto;
+  margin-right: 100rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+input{
+  display: inline-block;
+  width: 495rpx;
+}

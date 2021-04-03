@@ -1,0 +1,15 @@
+<!--pages/recruitment/page6/page6.wxml-->
+<view class="mid" hidden='{{result}}'>
+  <view class='container'>
+    <text style='color:white'>在即将迎来的大学生活里，你可能会遇到很多困难与挑战，但别忘记，在南开大学这个奇妙的地方，还会有希望与运气笼罩着每一个学子，那么，在日常生活中，你认为曾经的自己是一个满怀希望并且好运随行的锦鲤吗？</text>
+  </view>
+  <view class='container row-flex' hidden='{{result}}'>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='showyes'>Yes</button>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='next'>No</button>
+  </view>
+</view>
+<view class="mid"  hidden='{{!result}}'>
+  <view class='container'>
+    <button class='bar-button' hover-class='bar-button__hover' bindtap='showResult'>点击查看是否与我们有缘</button>
+  </view>
+</view>

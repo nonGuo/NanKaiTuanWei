@@ -1,0 +1,28 @@
+/* pages/recruitment/recruitment.wxss */
+.row-text{
+  text-align: center;
+  font-size: 0.9em;
+  color: white;
+}
+.swiper-height{
+  height: 200px;
+  margin-top: 50px
+}
+
+.block{
+  height: 300px;
+  width: 100%;
+}
+
+.mid{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+  height: 500px;
+  width:100%;
+}
+
+page {
+  background-image: url(https://image.potatofield.cn/recruitment/recruitment_blank.jpg)
+}

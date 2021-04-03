@@ -1,0 +1,32 @@
+<view class='container'>
+  <view class='title'>
+    <text>你的南开气质报告</text>
+  </view>
+</view>
+<view class='container'>
+  <view class='content indent'>
+    <text>经鉴定，{{nickname}}在2018年{{category}}，是一名{{remark}}！</text>
+  </view>
+</view>
+<view class='container'>
+   <image class='poster' src='{{imagePath}}'></image>
+</view>
+<view class='container'>
+  <button class='bar-button' hover-class='bar-button__hover' bindtap='savePhoto'>保存图片到手机</button>
+</view>
+<view class='container row-flex'>
+  <view class='half'>
+   <button class='bar-button return-button' hover-class='return-button__hover' bindtap='return'>返回时光机</button>
+  </view>
+  <view class='half'>
+   <button class='bar-button' hover-class='bar-button__hover' open-type='share'>分享给好友</button>
+  </view>
+</view>
+<view class='container'>
+  <view class='copyright'>
+    <text>Copyright © 2018</text>
+  </view>
+  <view class='copyright'>
+    <navigator open-type='redirect' url='/pages/about/about'>南开大学团委网络新媒体运营中心</navigator>
+  </view>
+</view>

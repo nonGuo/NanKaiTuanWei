@@ -1,0 +1,22 @@
+<view hidden='{{finish}}'>
+  <view class='title' style="font-size:58rpx; letter-spacing:2px">
+    <text>现在是{{month}}月{{day}}日\n离校庆还有\n{{remain}}天</text>
+  </view>
+  <view class='container'>
+    <textarea placeholder='想说的话' maxlength='84' bindinput='bindKeyInput'    show-confirm-bar='false' class='wish'></textarea>
+  </view>
+  <view class='container'>
+    <button class='bar-button' hover-class='bar-button__hover' bindtap='next'>打 卡</button>
+  </view>
+</view>
+<view hidden='{{!finish}}'>
+  <view class='container'>
+    <image class='logo' src='{{nkLogo}}'></image>
+  </view>
+  <view class='container'>
+    <view class='title' style="font-size:58rpx; letter-spacing:2px">
+      <text>活动已结束</text>
+    </view>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='next'>查看打卡记录</button>
+  </view>
+</view>

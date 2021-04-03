@@ -1,0 +1,52 @@
+<!--pages/graduate/answer/answer.wxml-->
+<background image="{{background}}">
+  <view class="container">
+    <view class="content">先写下你的名字吧~</view>
+    <input id="name" placeholder="请输入姓名或昵称" bindinput="bindkeyinput" maxlength="6"></input>
+  </view>
+  <view class="container">
+    <view class="content">你的破壳日？</view>
+    <input id="birth" placeholder="请输入你的生日" bindinput="bindkeyinput" maxlength="10"></input>
+  </view>
+  <view class="container">
+    <view class="content">你的星座是？</view>
+    <input id="sign" placeholder="请输入你的星座" bindinput="bindkeyinput" maxlength="3"></input>
+  </view>
+  <view class="container">
+    <view class="content">你的学院是？</view>
+    <input id="dept" placeholder="请输入你的学院" bindinput="bindkeyinput" maxlength="6"></input>
+  </view>
+  <view class="container">
+    <view class="content">在南开你最难忘的一件事?</view>
+    <textarea id="thing" placeholder="分享你在南开的独家记忆！" bindinput="bindkeyinput" maxlength="44"></textarea>
+  </view>
+  <view class="container">
+    <view class="content">在南开最让你感到幸福的是？</view>
+    <textarea id="happiness" placeholder="留下回忆中的那捧温暖吧～" bindinput="bindkeyinput" maxlength="44"></textarea>
+  </view>
+  <view class="container">
+    <view class="content">在南开你最舍不得的是谁？</view>
+    <textarea id="who" placeholder="给ta或ta们说些什么吧～" bindinput="bindkeyinput" maxlength="44"></textarea>
+  </view>
+  <view class="container">
+    <view class="content">对自己的一句话评价？</view>
+    <textarea id="judge" placeholder="写下一句属于NKer的自我评价吧 ( ੭ ˙ᗜ˙ )੭" bindinput="bindkeyinput" maxlength="44"></textarea>
+  </view>
+  <view class="container row-flex">
+    <view class='half'>
+      <button class='bar-button' hover-class='bar-button__hover' bindtap='prev'>重新选择头像</button>
+    </view>
+    <view class='half'>
+      <button class='bar-button' hover-class='bar-button__hover' bindtap="drawposter">生成同学录</button>
+    </view>
+  </view>
+  <view class='container'>
+    <view class='copyright'>
+      <text>Copyright © 2018</text>
+    </view>
+    <view class='copyright'>
+      <navigator open-type='redirect' url='/pages/about/about'>南开大学团委网络新媒体运营中心</navigator>
+    </view>
+  </view>
+  <canvas class='poster-canvas' canvas-id='poster'></canvas>
+</background>

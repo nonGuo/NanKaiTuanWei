@@ -1,0 +1,11 @@
+<!--pages/game/game.wxml-->
+<view class="back">
+  <image src="{{pic}}" class="pic"></image>
+</view>
+<view class="top">
+  <view class="blocks" wx:for="{{blocks}}">
+    <image src="{{item.blockSrc}}" hidden="{{item.hide}}" class="blockItem" bindtap="move" data-pos="{{item.pos}}" data-list="{{item.list}}"></image>
+  </view>
+</view>
+<view class="content">步数：{{count}}</view>
+<canvas canvas-id="cut" class="canva"></canvas>

@@ -1,0 +1,9 @@
+<!--pages/success/success.wxml-->
+<view class="container" style="margin-top:200rpx">
+<view class="words">恭喜您获得胜利！</view>
+<view class="words">您的总步数为{{count}}步</view>
+<view style="display:flex;flex-direction:row;margin-top:30rpx">
+  <button class="bar-button half" style="width:250rpx" bindtap="again">再来一遍</button>
+  <button class="bar-button half" style="width:250rpx;margin-left:25rpx" open-type="share">分享给好友</button>
+</view>
+</view>

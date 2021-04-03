@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 2289933 */
+  src: url('//at.alicdn.com/t/font_2289933_8rzjdfhjehd.eot');
+  src: url('//at.alicdn.com/t/font_2289933_8rzjdfhjehd.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2289933_8rzjdfhjehd.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2289933_8rzjdfhjehd.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2289933_8rzjdfhjehd.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2289933_8rzjdfhjehd.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  margin-left: 25rpx;
+  font-family: "iconfont" !important;
+  /*font-size: 16px;*/
+  font-style: normal;
+  width: 80rpx;
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #7a0c6ddc;
+  color: #ffffff;
+  font-size: 50rpx;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_xiugai:before {
+  content: "\e657";
+}

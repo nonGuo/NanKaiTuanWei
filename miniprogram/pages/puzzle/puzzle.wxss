@@ -1,0 +1,35 @@
+
+page{
+  background-image:url(https://image.potatofield.cn/picturepuzzle/purple.jpg) 
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.buttons{
+  margin-top: 50rpx;
+  width: 300rpx;
+}
+.head{
+  color: white;
+  text-align: center;
+  font-size: 30px
+}

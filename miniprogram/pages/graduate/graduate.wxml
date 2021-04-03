@@ -1,0 +1,14 @@
+<!--pages/graduate/graduate.wxml-->
+<background image="{{background}}">
+  <view class="container">
+    <view class="content" style="text-align:center" wx:for="{{words}}" wx:key="text">{{item}}</view>
+  </view>
+  <view class="container row-flex">
+    <view class="half">
+      <button class='bar-button' hover-class='bar-button__hover' bindtap='next'>开启专属同学录</button>
+    </view>
+    <view class="half">
+      <button class='bar-button' hover-class='bar-button__hover' bindtap='prev'>返回主页</button>
+    </view>
+  </view>
+</background>

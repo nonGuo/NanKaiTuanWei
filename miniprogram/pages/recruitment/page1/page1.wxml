@@ -1,0 +1,10 @@
+<!--pages/recruitment/page1/page1.wxml-->
+<view class="mid">
+  <view class='container' >
+    <text style='color:white'>首先，作为南开大学的第一百届学子，我们感谢并欣赏你选择了南开大学，在进一步了解了可爱的南小开之后，你有没有爱上她呢？</text>
+  </view>
+  <view class='container row-flex'>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='showyes'>Yes</button>
+    <button class='bar-button half' hover-class='bar-button__hover' bindtap='next'>No</button>
+  </view>
+</view>

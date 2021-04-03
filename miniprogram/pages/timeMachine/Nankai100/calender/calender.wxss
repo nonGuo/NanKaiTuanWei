@@ -1,0 +1,189 @@
+/* pages/calender/calender.wxss */
+.certificate-canvas {
+  width: 600px;
+  height: 800px;
+  position: fixed;
+  top: 9999px;
+}
+
+.block-center{
+  position: fixed;
+  top:10%;
+  left: 20%;
+  right: 20%;
+  bottom: 20%;
+}
+
+.calendar-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80rpx;
+}
+.calendar-body {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.calender-body-date-week {
+  display: flex;
+  position: relative;
+  width: 14%;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.check{
+  position:absolute;
+  opacity:0.8;
+  z-index: -1;
+  width: 80%;
+  left: 10%;
+  right: 10%;
+}
+
+.choose {
+  
+}
+
+.othermonth {
+  color: #a4a4a4;
+}
+
+.header{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50rpx;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40rpx;
+}
+
+.calendar-head-week{
+  display: flex;
+  width: 14%;
+  margin-bottom: 5px;
+  justify-content: center;
+  font-weight: 300;
+}
+
+.purple{
+  color: #620a58
+}
+
+.calendar-head {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30rpx;
+}
+
+.unallow{
+  background-color: gray;
+  color: white;
+}
+
+.zan-dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0);
+  display: none;
+}
+
+.zan-dialog__container {
+  position: fixed;
+  bottom: 400rpx;
+  width: 650rpx;
+  height: 500rpx;
+  margin-left: 50rpx;
+  background: white;
+  transform: translateY(300%);
+  transition: all 0.4s ease;
+  z-index: 12;
+  border-radius: 20rpx;
+  box-shadow: 0px 3px 3px 2px gainsboro;
+}
+
+.zan-dialog--show .zan-dialog__container {
+  transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+  display: block;
+}
+
+.iconfont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #620a58;
+  width: 53rpx;
+  height: 53rpx;
+}
+
+.iconfont .left, .iconfont .right {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 20rpx solid transparent;
+  border-bottom: 20rpx solid transparent;
+}
+
+.iconfont .left {
+  border-right: 40rpx solid transparent;
+  border-right-color: #620a58;
+}
+
+.iconfont .right {
+  border-left: 40rpx solid transparent;
+  border-left-color:  #620a58;
+}
+
+.grey{
+  color: gray;
+  font-size: 30rpx;
+  z-index: 1;
+}
+
+.wish{
+  margin-top: 20rpx;
+  font-size: 40rpx;
+  z-index: 1;
+}
+
+.backGround{
+  position:absolute;
+  opacity:0.4;
+  margin-left: 8%;
+  width: 50vw;
+  height: 50vw;
+  z-index: -1;
+}
+.image-holder {
+  text-align: center;
+}
+
+page {
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  background-image: url(https://image.potatofield.cn/Nankai100/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}

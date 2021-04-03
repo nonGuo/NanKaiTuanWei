@@ -1,0 +1,121 @@
+<background image="{{background}}">
+  <view class='container'>
+    <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/logo.jpg'></image>
+  </view>
+  <view class='container'>
+    <view class='title'>
+      <text>版权</text>
+    </view>
+    <view class='content center'>
+      <text>Copyright © 2019</text>
+    </view>
+    <view class='content center'>
+      <text>南开大学团委网络新媒体运营中心</text>
+    </view>
+    <view class='content center'>
+      <text>南开大学团委宣传部</text>
+    </view>
+    <view class='title'>
+      <text>版本信息</text>
+    </view>
+    <view class='subtitle'>
+      <text>当前版本</text>
+    </view>
+    <view class='content center'>
+      <text>2019年5月4日 v1.8.190504 正式版</text>
+    </view>
+    <view class='subtitle'>
+      <text>版本历史</text>
+    </view>
+    <view class='content center'>
+      <text>2019年4月30日 v1.7.190430 正式版</text>
+    </view>
+      <view class='content center'>
+      <text>2019年4月23日 v1.6.190423 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2019年4月4日 v1.6.190404 正式版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年12月31日 v1.5.181231 正式版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年12月23日 v1.4.181223 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年12月22日 v1.4.181222 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年12月21日 v1.4.181221 正式版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年12月20日 v1.3.181220 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年12月18日 v1.3.181218 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年12月3日 v1.3.181203 正式版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年11月26日 v1.2.181126 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年11月25日 v1.2.181125 正式版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年11月24日 v1.1.181124 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年11月20日 v1.1.181120 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年11月15日 v1.1.181115 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年10月30日 v1.1.181030 正式版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年10月30日 v1.0.181030 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年10月29日 v1.0.181029 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年10月27日 v1.0.181027 Beta版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年10月16日 v1.0.181016 正式版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年10月15日 v1.0.181015 正式版</text>
+    </view>
+    <view class='content center'>
+      <text>2018年10月14日 v0.9.181014 Beta版</text>
+    </view>
+    <view class='title'>
+      <text>开发人员</text>
+    </view>
+    <view class='subtitle'>
+      <text>功能逻辑代码</text>
+    </view>
+    <view class='content center'>
+      <text>张志毅 陈鸿泽 樊漆亮 郭冠琛 郝润来 郭伟</text>
+    </view>
+    <view class='subtitle'>
+      <text>前端样式代码</text>
+    </view>
+    <view class='content center'>
+      <text>张志毅 郝润来 郭伟</text>
+    </view>
+    <view class='subtitle'>
+      <text>美工设计</text>
+    </view>
+    <view class='content center'>
+      <text>王烁皓 王梓炫 张志毅 郭冠琛 郭巍 郝润来 郭伟</text>
+    </view>
+  </view>
+  <view class='container'>
+    <button class='bar-button' hover-class='bar-button__hover' bindtap='return'>退出</button>
+  </view>
+</background>
