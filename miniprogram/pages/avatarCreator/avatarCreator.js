@@ -1,6 +1,5 @@
 const app = getApp();
 const util = require('../../utils/util.js')
-wx.cloud.init()
 const tools = require('../../modules/tools')
 
 Page({
@@ -22,7 +21,6 @@ Page({
   //下载默认头像，背景图及分享图至临时目录
   onLoad: function() {
     var that = this;
-    wx.cloud.init();
     this.setData({
       bgImg: app.globalData.background
     })
