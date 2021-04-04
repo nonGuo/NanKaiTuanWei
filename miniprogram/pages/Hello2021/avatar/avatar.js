@@ -36,12 +36,18 @@ Page({
   },
 
   //授权上传头像
-  bindGetUserInfo: async function (e) {
-    let avatar = await getAvatar(e);
-    if(avatar){
-      wx.redirectTo({
-        url: '../answer/answer?avatar=' + avatar,
-      });
-    }
-  },
+  getUserProfile: async function(e) {
+    wx.getUserProfile({
+      desc: '获取微信头像',
+      success: async res => {
+        let avatar = await getAvatar(res);
+        if(avatar) {
+          wx.redirectTo({
+            url: '../answer/answer?avatar=' + avatar,
+          })
+        }
+      }
+    })
+  }
+
 })

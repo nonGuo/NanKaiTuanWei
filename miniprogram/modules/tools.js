@@ -29,7 +29,7 @@ async function verifyPhoto(avatar){
 async function getAvatar(e){
   let avatar;
   // 成功获取授权
-  if(e.detail.userInfo){
+  if(e.userInfo){
     wx.showToast({
       title: '授权成功',
       icon: 'success',
@@ -37,7 +37,7 @@ async function getAvatar(e){
       duration: 5000
     });
     // 更换为高清头像
-    let avatarUrl = String(e.detail.userInfo.avatarUrl).slice(0, -3).concat('0');
+    let avatarUrl = String(e.userInfo.avatarUrl).slice(0, -3).concat('0');
     // 下载头像
     avatar =  await (path => new Promise(function(resolve, reject){
       wx.downloadFile({
