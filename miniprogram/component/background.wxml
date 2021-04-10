@@ -1,4 +1,0 @@
-<!--background-url不支持传入fileID，需先获得临时链接-->
-<view style="background-image:url({{image}})" class="bg-img">
-  <slot></slot>
-</view>

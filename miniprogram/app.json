@@ -72,8 +72,5 @@
     "navigationBarTitleText": "南开大学团委服务平台",
     "navigationBarTextStyle": "white"
   },
-  "sitemapLocation": "sitemap.json",
-  "usingComponents": {
-    "background": "./component/background"
-  }
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,5 +1,4 @@
 // miniprogram/pages/Hello2021/answer/answer.js
-const app = getApp()
 Page({
 
   /**
@@ -21,9 +20,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      background: app.globalData.background
-    });
     let that = this;
     this.data.avatar=options.avatar;
     //随机选取图片并下载

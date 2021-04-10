@@ -1,209 +1,207 @@
-<background image="{{background}}">
-  <view class='container'>
-    <image class='logo' src='http://image.potatofield.cn/18-10-27/57751256.jpg'></image>
+<view class='container'>
+  <image class='logo' src='http://image.potatofield.cn/18-10-27/57751256.jpg'></image>
+</view>
+<view class='container'>
+  <view class='title'>
+    <text>关于时光机</text>
   </view>
-  <view class='container'>
-    <view class='title'>
-      <text>关于时光机</text>
-    </view>
-    <view class='content indent'>
-      <text>你好，欢迎来到时光机！</text>
-    </view>
-    <view class='content indent'>
-      <text>在这里，你可以重温本平台在过去每一个重要的日子推出的彩蛋。不管你是因为忙碌而错过了当初的精彩，还是对彼时的情境难以忘怀，你都可以在这里登上时间的舞台，无论现在还是将来。时光机，让你的回忆不留缺憾。</text>
-    </view>
+  <view class='content indent'>
+    <text>你好，欢迎来到时光机！</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>武汉加油头像生成器</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2020年4月2日推出的小程序。用于为武汉的各位勇士呐喊助威。</text>
-    </view>
+  <view class='content indent'>
+    <text>在这里，你可以重温本平台在过去每一个重要的日子推出的彩蛋。不管你是因为忙碌而错过了当初的精彩，还是对彼时的情境难以忘怀，你都可以在这里登上时间的舞台，无论现在还是将来。时光机，让你的回忆不留缺憾。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoSupportWuhan'>
-      <image class='button-image' src='https://image.potatofield.cn/whjy/whjyscq.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>武汉加油头像生成器</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>校庆志愿者终极闯关</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2019年10月30日推出的小程序。用于培训校庆志愿者。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2020年4月2日推出的小程序。用于为武汉的各位勇士呐喊助威。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoNankaiQs'>
-      <image class='button-image' src='https://image.potatofield.cn/NankaiQs/NankaiQsTitle.png'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoSupportWuhan'>
+    <image class='button-image' src='https://image.potatofield.cn/whjy/whjyscq.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>校庆志愿者终极闯关</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>校庆打卡小程序</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2019年6月30日推出的小程序。用于校庆打卡。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2019年10月30日推出的小程序。用于培训校庆志愿者。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoNankai100'>
-      <image class='button-image' src='https://image.potatofield.cn/Nankai100/share.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoNankaiQs'>
+    <image class='button-image' src='https://image.potatofield.cn/NankaiQs/NankaiQsTitle.png'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>校庆打卡小程序</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>五一去哪儿</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2019年4月30日推出的小程序。如果你对于这个假期去哪儿玩儿还没有主意，可以来这里为自己找些灵感。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2019年6月30日推出的小程序。用于校庆打卡。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoLaborDay2019'>
-      <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.png'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoNankai100'>
+    <image class='button-image' src='https://image.potatofield.cn/Nankai100/share.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>五一去哪儿</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>抽奖抽签小助手</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2018年11月20日推出的小程序。如果你想现场使用抽签抽奖功能，可以考虑试试这个小程序。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2019年4月30日推出的小程序。如果你对于这个假期去哪儿玩儿还没有主意，可以来这里为自己找些灵感。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoLottery'>
-      <image class='button-image' src='http://image.potatofield.cn/18-11-21/4426294.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoLaborDay2019'>
+    <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.png'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>抽奖抽签小助手</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>不忘先贤，砥砺前行</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2019年4月4日推出的小程序。在这里你将了解到南开先贤及先烈的事迹，还能够为他们献上跨越时代的敬意。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2018年11月20日推出的小程序。如果你想现场使用抽签抽奖功能，可以考虑试试这个小程序。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoQingming'>
-      <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoLottery'>
+    <image class='button-image' src='http://image.potatofield.cn/18-11-21/4426294.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>不忘先贤，砥砺前行</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>五四青年节，测测你属于哪系青年</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2019年5月4日推出的小程序。在这里你将回答几个问题，用以测试你是哪系青年。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2019年4月4日推出的小程序。在这里你将了解到南开先贤及先烈的事迹，还能够为他们献上跨越时代的敬意。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoYouthDay'>
-      <image class='button-image' src='http://image.potatofield.cn/youthDay/index.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoQingming'>
+    <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>五四青年节，测测你属于哪系青年</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>许愿2019</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2018年12月31日推出的小程序。你可以为自己的新年立下小目标，年末再来看看自己完成得怎样。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2019年5月4日推出的小程序。在这里你将回答几个问题，用以测试你是哪系青年。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoFlagNineteen'>
-      <image class='button-image' src='http://image.potatofield.cn/18-11-14/10587524.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoYouthDay'>
+    <image class='button-image' src='http://image.potatofield.cn/youthDay/index.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>许愿2019</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>回首2018：测试你的南开气质</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2018年12月21日推出的小程序。你可以回顾你的2018，看看自己参与了哪些活动，给自己做一个多维度的评价。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2018年12月31日推出的小程序。你可以为自己的新年立下小目标，年末再来看看自己完成得怎样。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoByeEighteen'>
-      <image class='button-image' src='http://image.potatofield.cn/18-12-17/54929529.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoFlagNineteen'>
+    <image class='button-image' src='http://image.potatofield.cn/18-11-14/10587524.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>回首2018：测试你的南开气质</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>改革开放知多少</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2018年12月3日为纪念改革开放40周年推出的小程序。你可以在这里来一场“考试”，看看自己对改革开放有多少了解。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2018年12月21日推出的小程序。你可以回顾你的2018，看看自己参与了哪些活动，给自己做一个多维度的评价。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoReformForty'>
-      <image class='button-image' src='http://image.potatofield.cn/18-11-14/8563060.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoByeEighteen'>
+    <image class='button-image' src='http://image.potatofield.cn/18-12-17/54929529.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>改革开放知多少</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>我与南开弹恋爱</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2018年10月30日推出的，配合“南缘北至”活动的小程序。你可以尝试弹奏南开校歌，与南开“弹”个恋爱。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2018年12月3日为纪念改革开放40周年推出的小程序。你可以在这里来一场“考试”，看看自己对改革开放有多少了解。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoLoveNankai'>
-      <image class='button-image' src='http://image.potatofield.cn/18-10-30/56121876.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoReformForty'>
+    <image class='button-image' src='http://image.potatofield.cn/18-11-14/8563060.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>我与南开弹恋爱</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>九九南开，等一个你</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2018年10月16日为纪念南开大学九十九周年校庆推出的小程序。你可以在这里生成你的99校庆专属纪念海报。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2018年10月30日推出的，配合“南缘北至”活动的小程序。你可以尝试弹奏南开校歌，与南开“弹”个恋爱。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoNinetyNine'>
-      <image class='button-image' src='http://image.potatofield.cn/18-10-27/95144105.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoLoveNankai'>
+    <image class='button-image' src='http://image.potatofield.cn/18-10-30/56121876.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>九九南开，等一个你</text>
   </view>
-  <view class='container'>
-    <view class='subtitle'>
-      <text>荷花节邀请函</text>
-    </view>
-    <view class='content indent'>
-      <text>这是2018年6月19日推出的，为南开大学六届荷花节预热的小程序。你可以在这里生成你的第六届荷花节专属纪念海报。</text>
-    </view>
+  <view class='content indent'>
+    <text>这是2018年10月16日为纪念南开大学九十九周年校庆推出的小程序。你可以在这里生成你的99校庆专属纪念海报。</text>
   </view>
-  <view class='container'>
-    <button class='block-button' bindtap='gotoLotus'>
-      <image class='button-image' src='http://image.potatofield.cn/18-10-28/73068552.jpg'></image>
-      <view class='button-mask' hover-class='button-mask__hover'></view>
-    </button>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoNinetyNine'>
+    <image class='button-image' src='http://image.potatofield.cn/18-10-27/95144105.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <view class='subtitle'>
+    <text>荷花节邀请函</text>
   </view>
-  <view class='container'>
-    <button class='bar-button' hover-class='bar-button__hover' bindtap='prev'>退出</button>
+  <view class='content indent'>
+    <text>这是2018年6月19日推出的，为南开大学六届荷花节预热的小程序。你可以在这里生成你的第六届荷花节专属纪念海报。</text>
   </view>
-  <view class='container'>
-    <view class='copyright'>
-      <text>Copyright © 2018</text>
-    </view>
-    <view class='copyright'>
-      <navigator open-type='redirect' url='/pages/about/about'>南开大学团委网络新媒体运营中心</navigator>
-    </view>
+</view>
+<view class='container'>
+  <button class='block-button' bindtap='gotoLotus'>
+    <image class='button-image' src='http://image.potatofield.cn/18-10-28/73068552.jpg'></image>
+    <view class='button-mask' hover-class='button-mask__hover'></view>
+  </button>
+</view>
+<view class='container'>
+  <button class='bar-button' hover-class='bar-button__hover' bindtap='prev'>退出</button>
+</view>
+<view class='container'>
+  <view class='copyright'>
+    <text>Copyright © 2018</text>
   </view>
-</background>
+  <view class='copyright'>
+    <navigator open-type='redirect' url='/pages/about/about'>南开大学团委网络新媒体运营中心</navigator>
+  </view>
+</view>

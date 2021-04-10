@@ -1,5 +1,4 @@
 // pages/loveNankai__poster/loveNankai__poster.js
-const app = getApp()
 Page({
 
   data: {
@@ -11,7 +10,6 @@ Page({
     var that = this;
     that.setData({
       imagePath: options.imagePath,
-      background: app.globalData.background
     })
     wx.downloadFile({
       url: that.data.shareImage,

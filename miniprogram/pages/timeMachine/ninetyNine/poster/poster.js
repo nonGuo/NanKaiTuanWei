@@ -1,4 +1,3 @@
-const app = getApp()
 Page({
 
   data: {
@@ -8,8 +7,7 @@ Page({
   //接受图片
   onLoad: function (options) {
     this.setData({
-      imagePath: options.imagePath,
-      background: app.globalData.background
+      imagePath: options.imagePath
     })
   },
 

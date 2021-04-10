@@ -15,7 +15,6 @@ Page({
   onLoad: function (options) {
     this.setData({
       imagePath: options.imagePath,
-      background: options.background
     })
   },
 

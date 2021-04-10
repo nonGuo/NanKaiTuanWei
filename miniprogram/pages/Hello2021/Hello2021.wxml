@@ -1,19 +1,17 @@
-<background image="{{background}}">
-  <view class="col-center">
-    <view style="width: 100%">
-      <view class="container">
-        <view class="content" style="text-align:center" wx:for="{{words}}" wx:key="text">{{item}}</view>
+<view class="col-center">
+  <view style="width: 100%">
+    <view class="container">
+      <view class="content" style="text-align:center" wx:for="{{words}}" wx:key="text">{{item}}</view>
+    </view>
+    <view class="container row-flex">
+      <view class="half">
+        <button class='bar-button' hover-class='bar-button__hover' bindtap='next'>
+          <text class='special'>制定愿望清单</text>
+        </button>
       </view>
-      <view class="container row-flex">
-        <view class="half">
-          <button class='bar-button' hover-class='bar-button__hover' bindtap='next'>
-            <text class='special'>制定愿望清单</text>
-          </button>
-        </view>
-        <view class="half">
-          <button class='bar-button' hover-class='bar-button__hover' bindtap='prev'>返回主页</button>
-        </view>
+      <view class="half">
+        <button class='bar-button' hover-class='bar-button__hover' bindtap='prev'>返回主页</button>
       </view>
     </view>
   </view>
-</background>
+</view>

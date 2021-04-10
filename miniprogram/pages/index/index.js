@@ -8,23 +8,6 @@ Page({
   }, 
 
   onLoad: function() {
-    if(!app.globalData.background){
-      wx.cloud.init();
-      wx.cloud.getTempFileURL({
-        fileList: ['cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/bg-index.jpg'],
-        success: res => {
-          app.globalData.background = res.fileList[0].tempFileURL
-          this.setData({
-            background: app.globalData.background
-          })
-        },
-        fail: console.error
-      })
-    }else{
-      this.setData({
-        background: app.globalData.background
-      })
-    }
     var that = this
     wx.cloud.downloadFile({
       fileID: this.data.imageUrl,

@@ -1,10 +1,7 @@
 // pages/timeMachine/timeMachine.js
-const app = getApp();
 Page({
   onLoad: function(){
-    this.setData({
-      background: app.globalData.background
-    })
+ 
   },
 
   //武汉加油

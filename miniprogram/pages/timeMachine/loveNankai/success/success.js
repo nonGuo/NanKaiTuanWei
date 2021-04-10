@@ -1,5 +1,4 @@
 // pages/loveNankai/success/success.js
-const app = getApp()
 Page({
 
   data: {
@@ -12,7 +11,6 @@ Page({
     var that = this;
     that.setData({
       level: options.level,
-      background: app.globalData.background
     })
     wx.downloadFile({
       url: that.data.imagePath,

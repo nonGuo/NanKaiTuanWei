@@ -14,9 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      background: options.background
-    })
+
   },
 
    prev:function(){
@@ -30,7 +28,7 @@ Page({
     let avatar = await _fromAlbum();
     if(avatar){
       wx.redirectTo({
-        url: '../answer/answer?avatar=' + avatar[0] + '&&background=' + this.data.background,
+        url: '../answer/answer?avatar=' + avatar[0],
       });
     }
   },

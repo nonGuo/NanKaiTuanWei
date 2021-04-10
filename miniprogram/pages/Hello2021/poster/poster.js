@@ -1,5 +1,4 @@
 // miniprogram/pages/Hello2021/poster/poster.js
-const app = getApp()
 Page({
 
   /**
@@ -16,7 +15,6 @@ Page({
   onLoad: function (options) {
     this.setData({
       imagePath: options.imagePath,
-      background: app.globalData.background
     })
   },
 

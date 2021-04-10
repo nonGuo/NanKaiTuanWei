@@ -1,12 +1,6 @@
 // pages/feedback/feedback.js
-const app = getApp()
-Page({
 
-  onLoad: function() {
-    this.setData({
-      background: app.globalData.background
-    })
-  },
+Page({
 
   //返回首页
   return: function () {

@@ -24,8 +24,7 @@ Page({
   onLoad: function (options) {
     var that = this
     this.setData({
-      avatar:options.avatar,
-      background: options.background
+      avatar:options.avatar
     })
     var r = Math.floor(Math.random() * this.data.imagePaths.length)
     this.setData({
@@ -199,7 +198,7 @@ Page({
             imagePath: tempFilePath,
           });
           wx.redirectTo({
-            url: '../poster/poster?imagePath=' + that.data.imagePath + '&&background=' + that.data.background,
+            url: '../poster/poster?imagePath=' + that.data.imagePath,
           })
         },
         fail: function (res) {

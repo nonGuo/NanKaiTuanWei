@@ -1,29 +1,28 @@
-<background image="{{background}}">
-  <view class='container'>
-    <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/logo.jpg'></image>
+
+<view class='container'>
+  <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/logo.jpg'></image>
+</view>
+<view class='container'>
+  <view class='content indent'>
+    <text>感谢您使用南开大学团委服务平台，感谢您的信任与支持！</text>
   </view>
-  <view class='container'>
-    <view class='content indent'>
-      <text>感谢您使用南开大学团委服务平台，感谢您的信任与支持！</text>
-    </view>
-    <view class='content indent'>
-      <text>南开大学团委服务平台是南开大学团委宣传部和网络新媒体运营中心开发并维护的线上师生服务平台。为了更好地服务师生，我们希望时刻倾听您的声音。如果您使用本平台时出现问题，或认为平台需要增加功能，欢迎您对我们提出批评和建议。</text>
-    </view>
+  <view class='content indent'>
+    <text>南开大学团委服务平台是南开大学团委宣传部和网络新媒体运营中心开发并维护的线上师生服务平台。为了更好地服务师生，我们希望时刻倾听您的声音。如果您使用本平台时出现问题，或认为平台需要增加功能，欢迎您对我们提出批评和建议。</text>
   </view>
-  <view class='container row-flex'>
-    <view class='half'>
-      <button class='bar-button return-button' hover-class='return-button__hover' bindtap='return'>返回</button>
-    </view>
-    <view class='half'>
-      <button class='bar-button' hover-class='bar-button__hover' open-type='feedback'>继续</button>
-    </view>
+</view>
+<view class='container row-flex'>
+  <view class='half'>
+    <button class='bar-button return-button' hover-class='return-button__hover' bindtap='return'>返回</button>
   </view>
-  <view class='container'>
-    <view class='copyright'>
-      <text>Copyright © 2018</text>
-    </view>
-    <view class='copyright'>
-      <navigator url='/pages/about/about'>南开大学团委网络新媒体运营中心</navigator>
-    </view>
+  <view class='half'>
+    <button class='bar-button' hover-class='bar-button__hover' open-type='feedback'>继续</button>
   </view>
-</background>
+</view>
+<view class='container'>
+  <view class='copyright'>
+    <text>Copyright © 2018</text>
+  </view>
+  <view class='copyright'>
+    <navigator url='/pages/about/about'>南开大学团委网络新媒体运营中心</navigator>
+  </view>
+</view>

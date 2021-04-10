@@ -14,7 +14,6 @@ Page({
       wish: options.wish,
       avatar: options.avatar,
       nickname: options.nickname,
-      background: app.globalData.background
     })
   },
 

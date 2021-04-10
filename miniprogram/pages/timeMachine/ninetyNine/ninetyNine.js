@@ -1,5 +1,3 @@
-const app = getApp();
-
 Page({
 
   data: {
@@ -12,9 +10,6 @@ Page({
   //下载默认头像及分享图片至临时目录
   onLoad: function () {
     var that = this;
-    this.setData({
-      background: app.globalData.background
-    })
     wx.downloadFile({
       url: that.data.avatar,
       success: function (res) {

@@ -1,5 +1,4 @@
 // pages/loveNankai__play/loveNankai__play.js
-const app = getApp()
 Page({
 
   /**
@@ -33,7 +32,6 @@ Page({
       level: options.level,
       speed: options.speed,
       chances: options.chances,
-      background: app.globalData.background
     })
     wx.showToast({
       title: '资源加载中',
