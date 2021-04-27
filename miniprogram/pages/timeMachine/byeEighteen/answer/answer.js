@@ -2,7 +2,7 @@ Page({
 
   data: {
     page: 0,
-    imagePath: "https://image.potatofield.cn/18-12-18/18499258.jpg",
+    imagePath: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/byeEighteen/18499258.jpg",
     activities:[
       {
         category: '艺术演出及竞赛',
@@ -173,14 +173,15 @@ Page({
       }
     })
     //下载背景图
-    wx.downloadFile({
-      url: that.data.imagePath,
-      success: function(res) {
+    wx.cloud.downloadFile({
+    fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/byeEighteen/18499258.jpg',
+      success:res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
           imagePath: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
   },  
 

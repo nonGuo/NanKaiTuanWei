@@ -77,18 +77,19 @@ Page({
   },
 
   //授权上传头像
-  bindGetUserInfo: async function (e) {
+  getUserProfile: async function(e){
     var that = this;
+    wx.getUserProfile({
+    desc: '获取微信头像',
     //成功获取授权
-    if (e.detail.userInfo) {
-      
+    success: async res => {
       that.setData({
-        name: e.detail.userInfo.nickName,
-        avatar: e.detail.userInfo.avatarUrl
+        name:res.userInfo.nickName,
+        avatar: res.userInfo.avatarUrl
       })
       wx.downloadFile({
-        url: e.detail.userInfo.avatarUrl,
-        success: async function (res) {
+        url:res.userInfo.avatarUrl,
+        success:async function(res) {
           //把照片传给avatar
           that.setData({
             avatar: res.tempFilePath,
@@ -126,7 +127,7 @@ Page({
           })
         },
         //下载头像失败
-        fail: function (res) {
+        fail: function (e) {
           wx.showToast({
             title: '头像获取失败',
             icon: 'none',
@@ -134,14 +135,15 @@ Page({
           })
         }
       })
-    }
+    },
     //获取授权失败
-    else {
+    fail: err => {
       wx.showToast({
         title: '授权失败',
         icon: 'none',
         duration: 1500
       })
     }
+  })
   }
 })

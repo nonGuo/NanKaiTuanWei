@@ -1,5 +1,5 @@
 <view class='container'>
-  <image class='logo' src='http://image.potatofield.cn/18-11-15/43861035.jpg'></image>
+  <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/byeEighteen/43861035.jpg'></image>
 </view>
 <view class='container instruction'>
   <text>再选择一张图片作为头像~</text>
@@ -9,7 +9,7 @@
     <button class='bar-button' hover-class='bar-button__hover' bindtap='fromAlbum'>选择图片上传</button>
   </view>
   <view class='half'>
-    <button class='bar-button' hover-class='bar-button__hover' open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'>使用微信头像</button>
+    <button class='bar-button' hover-class='bar-button__hover' bindtap="getUserProfile">使用微信头像</button>
   </view>
 </view>
 <view class='container'>

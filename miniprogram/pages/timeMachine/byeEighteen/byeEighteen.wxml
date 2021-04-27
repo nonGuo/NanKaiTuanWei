@@ -1,5 +1,5 @@
 <view class='container'>
-  <image class='logo' src='http://image.potatofield.cn/18-11-15/43203732.jpg'></image>
+  <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/byeEighteen/43203732.jpg'></image>
 </view>
 <view class='container instruction'>
   <text>开始前先写下自己的名字哦~</text>
@@ -9,7 +9,7 @@
   <button class='bar-button side-button' hover-class='bar-button__hover' bindtap='bindConfirm'>确定</button>
 </view>
 <view class='container'>
-  <button class='bar-button' hover-class='bar-button__hover' open-type='getUserInfo' bindgetuserinfo='bindGetNickname'>获取微信昵称</button>
+  <button class='bar-button' hover-class='bar-button__hover' bindtap="getUserProfile">获取微信昵称</button>
 </view>
 <view class='container row-flex'>
   <view class='half'>

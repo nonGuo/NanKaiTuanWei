@@ -1,19 +1,20 @@
 Page({
 
   data: {
-    shareImage: "https://image.potatofield.cn/18-12-17/61841224.jpg",
+    shareImage: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/byeEighteen/61841224.jpg",
   },
 
   onLoad: function (options) {
     var that = this
-    wx.downloadFile({
-      url: that.data.shareImage,
-      success: function (res) {
+    wx.cloud.downloadFile({
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/byeEighteen/61841224.jpg',
+      success:res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
           shareImage: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
     that.setData({
       imagePath: options.imagePath,

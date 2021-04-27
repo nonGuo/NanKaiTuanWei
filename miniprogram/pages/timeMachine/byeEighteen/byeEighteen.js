@@ -2,7 +2,7 @@ Page({
 
   data: {
     nickname: "南开人",
-    shareImage: "https://image.potatofield.cn/18-12-17/61841224.jpg",
+    shareImage: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/byeEighteen/61841224.jpg",
   },
 
   //下载分享图
@@ -34,23 +34,26 @@ Page({
   },
 
   //授权获得昵称
-  bindGetNickname: function (e) {
+  getUserProfile: async function(e){
     var that = this;
-    if (e.detail.userInfo) {
+    wx.getUserProfile({
+      desc: '获取微信昵称',
+      success: async res =>{
       that.setData({
-        nickname: e.detail.userInfo.nickName
+        nickname: res.userInfo.nickName
       })
       wx.redirectTo({
         url: './avatar/avatar?nickname=' + this.data.nickname,
       })
-    }
-    else {
+    },
+    fail:async function() {
       wx.showToast({
         title: '授权失败',
         icon: 'none',
         duration: 1500
       })
     }
+  })
   },
 
   //退出
