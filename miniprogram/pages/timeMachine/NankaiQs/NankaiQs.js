@@ -2,14 +2,14 @@
 Page({
 
   data: {
-    imageUrl: 'https://image.potatofield.cn/NankaiQs/Sharecard.png',
+    imageUrl: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/NankaiQs/Sharecard.png',
     nickname: '南开人'
   },
 
   onLoad: function () {
     var that = this
-    wx.downloadFile({
-      url: this.data.imageUrl,
+    wx.cloud.downloadFile({
+      fileID: this.data.imageUrl,
       success: function (res) {
         var tempFilePath = res.tempFilePath;
         that.setData({
@@ -42,22 +42,29 @@ Page({
     this.gotoAnswer()
   },
 
-  //授权获得昵称
-  bindGetNickname: function (e) {
-    var that = this;
-    if (e.detail.userInfo) {
-      that.setData({
-        nickname: e.detail.userInfo.nickName,
-      })
-      that.gotoAnswer()
-    }
-    else {
-      wx.showToast({
-        title: '授权失败',
-        icon: 'none',
-        duration: 1500
-      })
-    }
+  getUserProfile:function(){
+    let that=this;
+    wx.getUserProfile({
+      desc:'获取用户昵称',
+      success:async function(res){
+        wx.showToast({
+          title: '授权成功',
+          icon:'success',
+          mask:true,
+          duration:5000
+        });
+
+        that.data.nickname=res.userInfo.nickName;
+        that.gotoAnswer()
+      },
+      fail:async function(res){
+        wx.showToast({
+          title: '授权失败',
+          icon: 'none',
+          duration: 1500
+        })
+      }
+    })
   },
 
   onShareAppMessage: function () {

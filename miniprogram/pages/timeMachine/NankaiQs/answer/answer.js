@@ -8,12 +8,12 @@ Page({
     answerHidden: true,
     buttonDisabled: "",
     answerImagePath: '',
-    correctAnswerImagePath: 'https://image.potatofield.cn/NankaiQs/right.png',
-    wrongAnswerImagePath: 'https://image.potatofield.cn/NankaiQs/wrong.png',
+    correctAnswerImagePath: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/NankaiQs/right.png',
+    wrongAnswerImagePath: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/NankaiQs/wrong.png',
     showImageMask: true,
     clickTwice: false,
-    highScoreImagePath: 'https://image.potatofield.cn/NankaiQs/NankaiQsMore.jpg',
-    lowScoreImagePath: 'https://image.potatofield.cn/NankaiQs/NankaiQsLess.jpg',
+    highScoreImagePath: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/NankaiQs/NankaiQsMore.jpg',
+    lowScoreImagePath: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/NankaiQs/NankaiQsLess.jpg',
     questionBank: [
       { question: "_____创作的《中国历史研究法》，就是由他在南开上课的讲稿整理而成。", selectA: "梁启超", selectB: "范文澜", selectC: "汤用彤", selectD: "竺可桢", answer: "A" },
       { question: '七七事变爆发不久，_____说："南开凝聚了我一生之心血，战端一开，难以保全。保不住就不保了，决不能向日本人屈服！打烂了南开可以再重建，国家一旦灭亡了，还谈什么教育！"', selectA: "严修", selectB: "张伯苓", selectC: "周恩来", selectD: "杨石先", answer: "B" },
@@ -170,21 +170,39 @@ Page({
   onLoad: function (options) {
     var that = this
     that.selectQuestions()
-    wx.downloadFile({
-      url: that.data.highScoreImagePath,
-      success: function (res) {
-        var tempFilePath = res.tempFilePath
-        that.setData({
-          highScoreImagePath: tempFilePath
-        })
-      }
-    })
-    wx.downloadFile({
-      url: that.data.lowScoreImagePath,
+    wx.cloud.downloadFile({
+      fileID: that.data.correctAnswerImagePath,
       success: function(res) {
         var tempFilePath = res.tempFilePath
         that.setData({
-          lowScoreImagePath: tempFilePath
+          correctAnswerImagePath: tempFilePath,
+        })
+      }
+    })
+    wx.cloud.downloadFile({
+      fileID: that.data.wrongAnswerImagePath,
+      success: function(res) {
+        var tempFilePath = res.tempFilePath
+        that.setData({
+          wrongAnswerImagePath: tempFilePath,
+        })
+      }
+    })
+    wx.cloud.downloadFile({
+      fileID: that.data.lowScoreImagePath,
+      success: function(res) {
+        var tempFilePath = res.tempFilePath
+        that.setData({
+          lowScoreImagePath: tempFilePath,
+        })
+      }
+    })
+    wx.cloud.downloadFile({
+      fileID: that.data.highScoreImagePath,
+      success: function(res) {
+        var tempFilePath = res.tempFilePath
+        that.setData({
+          highScoreImagePat: tempFilePath,
         })
       }
     })

@@ -1,8 +1,8 @@
 Page({
 
   data: {
-    imagePath: 'https://image.potatofield.cn/NankaiQs/NankaiQsMore.jpg',
-    shareImage: 'https://image.potatofield.cn/NankaiQs/Sharecard.png'
+    imagePath: '',
+    shareImage: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/NankaiQs/Sharecard.png'
   },
 
   onLoad: function (options) {
@@ -11,8 +11,8 @@ Page({
       nickname: options.nickname,
       imagePath: options.imagePath
     })
-    wx.downloadFile({
-      url: that.data.shareImage,
+    wx.cloud.downloadFile({
+      fileID: that.data.shareImage,
       success: function (res) {
         var tempFilePath = res.tempFilePath
         that.setData({
