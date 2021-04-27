@@ -1,5 +1,5 @@
 <view class='container'>
-  <image class='logo' src='http://image.potatofield.cn/18-11-24/3575814.jpg'></image>
+  <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lottery/3575814.png'></image>
 </view>
 <view wx:if="{{mode==='multiple'}}" class='container title'>
   <text>请选择抽奖人数</text>

@@ -1,5 +1,5 @@
 <view class='container'>
-  <image class='logo' src='http://image.potatofield.cn/18-11-21/86474431.jpg'></image>
+  <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lottery/86474431.png'></image>
 </view>
 <view class='container'>
   <view class='title'>
@@ -9,7 +9,7 @@
 <view class='container'>
   <button class='block-button' bindtap='multipleMode'>
     <view class='container row-flex'>
-      <image class='half' mode='widthFix' src='http://image.potatofield.cn/18-11-24/74898333.jpg'></image>
+      <image class='half' mode='widthFix' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lottery/74898333.png'></image>
       <view class='half content'>
         <text>输入号码范围和抽奖人数，一次性随机抽取获奖者</text>
       </view>
@@ -20,7 +20,7 @@
 <view class='container'>
   <button class='block-button' bindtap='singleMode'>
     <view class='container row-flex'>
-      <image class='half' mode='widthFix' src='http://image.potatofield.cn/18-11-24/69411768.jpg'></image>
+      <image class='half' mode='widthFix' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lottery/69411768.png'></image>
       <view class='half content'>
         <text>输入号码范围和抽签次数，每次随机抽取一个号码</text>
       </view>

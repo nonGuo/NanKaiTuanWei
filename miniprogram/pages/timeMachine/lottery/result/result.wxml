@@ -1,6 +1,6 @@
 <view wx:if="{{mode==='multiple'}}">
   <view class='container'>
-    <image class='logo' src='http://image.potatofield.cn/18-11-24/74898333.jpg'></image>
+    <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lottery/74898333.png'></image>
   </view>
   <view class='container instruction'>
     <text>本次抽奖结果于{{time}}产生</text>
@@ -14,7 +14,7 @@
 </view>
 <view wx:else>
   <view class='container'>
-    <image class='logo' src='http://image.potatofield.cn/18-11-24/69411768.jpg'></image>
+    <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lottery/69411768.png'></image>
   </view>
   <view class='container instruction'>
     <text>当前已抽取{{index}}枚签，共{{result.length}}枚</text>

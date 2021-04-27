@@ -1,12 +1,12 @@
 Page({
   data: {
-    imageUrl: 'https://image.potatofield.cn/18-11-24/76817672.jpg'
+    imageUrl: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lottery/76817672.jpg'
   },
 
   onLoad: function (options) {
     var that = this
-    wx.downloadFile({
-      url: that.data.imageUrl,
+    wx.cloud.downloadFile({
+      fileID: that.data.imageUrl,
       success: function(res) {
         var tempFilePath = res.tempFilePath
         that.setData({
