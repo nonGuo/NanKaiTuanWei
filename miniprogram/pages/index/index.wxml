@@ -12,19 +12,19 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoHello2021'>
-    <image class='button-image' src='https://image.potatofield.cn/Hello2021/cover.png'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/Hello2021/cover.png'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoNKYearBook'>
-    <image class='button-image' src='https://image.potatofield.cn/NKYearBook/NKYearBook01.png'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/graduate/NKYearBook01.png'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoPuzzle'>
-    <image class='button-image' src='https://image.potatofield.cn/picturepuzzle/background02.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/background02.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -36,13 +36,13 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoTimeMachine'>
-    <image class='button-image' src='http://image.potatofield.cn/18-10-27/37330841.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/title.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoRecruitment'>
-    <image class='button-image' src='https://image.potatofield.cn/recruitment/recruitment_title.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/recruitment_title.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>

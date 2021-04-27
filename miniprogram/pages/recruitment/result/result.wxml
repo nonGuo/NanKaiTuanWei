@@ -6,19 +6,19 @@
     </view>
     <view class='container' hidden='{{texthide[0]}}'>
       <button class='block-button' bindtap='gotoNankai100'>
-        <image class='button-image' src='https://image.potatofield.cn/Nankai100/share.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/nk100.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
     <view class='container' hidden='{{texthide[0]}}'>
       <button class='block-button' bindtap='gotoAvatarCreator'>
-        <image class='button-image' src='http://image.potatofield.cn/18-10-27/9492853.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/nkavatar.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
     <view class='container' hidden='{{texthide[0]}}'>
       <button class='block-button' bindtap='gotoNinetyNine'>
-        <image class='button-image' src='http://image.potatofield.cn/18-10-27/95144105.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/nk99.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
@@ -27,13 +27,13 @@
     </view>
     <view class='container' hidden='{{texthide[1]}}'>
       <button class='block-button' bindtap='gotoQingming'>
-        <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/qingming.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
     <view class='container' hidden='{{texthide[1]}}'>
       <button class='block-button' bindtap='gotoReformForty'>
-        <image class='button-image' src='http://image.potatofield.cn/18-11-14/8563060.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/gaigekaifang.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
@@ -42,7 +42,7 @@
     </view>
     <view class='container' hidden='{{texthide[2]}}'>
       <button class='block-button' bindtap='gotoLaborDay2019'>
-        <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.png'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/51.png'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
@@ -51,13 +51,13 @@
     </view>
     <view class='container' hidden='{{texthide[3]}}'>
       <button class='block-button' bindtap='gotoLoveNankai'>
-        <image class='button-image' src='http://image.potatofield.cn/18-10-30/56121876.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/play.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
     <view class='container' hidden='{{texthide[3]}}'>
       <button class='block-button' bindtap='gotoLotus'>
-        <image class='button-image' src='http://image.potatofield.cn/18-10-28/73068552.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/hehua.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
@@ -68,7 +68,7 @@
     </view> -->
     <view class='container' hidden='{{texthide[4]}}'>
       <button class='block-button' bindtap='gotoHuarongdao'>
-        <image class='button-image' src='http://image.potatofield.cn/18-11-14/10587524.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/2019.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
@@ -77,13 +77,13 @@
     </view>
     <view class='container' hidden='{{texthide[5]}}'>
       <button class='block-button' bindtap='gotoFlagNineteen'>
-        <image class='button-image' src='http://image.potatofield.cn/18-11-14/10587524.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/2019.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>
     <view class='container' hidden='{{texthide[5]}}'>
       <button class='block-button' bindtap='gotoLottery'>
-        <image class='button-image' src='http://image.potatofield.cn/18-11-21/4426294.jpg'></image>
+        <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/chouqian.jpg'></image>
         <view class='button-mask' hover-class='button-mask__hover'></view>
       </button>
     </view>

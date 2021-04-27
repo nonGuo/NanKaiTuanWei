@@ -9,7 +9,7 @@ Page({
     autoplay:true,
     position:0,
     end:false,
-    share: "https://image.potatofield.cn/recruitment/recruitment_share.jpg",
+    share: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/recruitment/recruitment_share.jpg",
   },
   onLoad:function(){
     var that = this
