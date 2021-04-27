@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shareImage:"https://image.potatofield.cn/Hello2021/share.png",
+    shareImage:"https://6e61-nankaituanwei-j5pm1-1257843133.tcb.qcloud.la/resources/Hello2021/share.png",
     imagePath:""
   },
 

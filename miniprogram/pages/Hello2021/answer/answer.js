@@ -10,7 +10,7 @@ Page({
     flag1:"",
     flag2:"",
     flag3:"",
-    imagePaths:["https://image.potatofield.cn/Hello2021/wishlist1.png","https://image.potatofield.cn/Hello2021/wishlist2.png"],
+    imagePaths:["cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/Hello2021/wishlist1.png","cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/Hello2021/wishlist2.png"],
     imagePath:"",
     flags:["成功上岸","过四级","过六级","家人身体健康","光吃不胖","发量猛增","永不挂科","一次长途旅行","看完计划的所有电影","疫情早早结束","学到一项新的体育项目","读完计划的所有书目","看一场演唱会","养一只宠物","坚持规律作息（做合格早八人）","痘痘消失","多陪伴家人","学分绩猛增","钱包鼓起来","总能抢到教室里的心仪位置","自习室永远有座","再也不丢学子卡","早早刷完创高","追星女孩永不心碎","遇到靠谱的小组组员","ddl不堆积","谈一场恋爱","感情顺利","认识一些新朋友","选课再也不掉课","游戏上分顺利","和老友能够常聚","不睡觉也不困","遇到负责任的老师","转专业成功","宿舍翻新","常见好天气","停止内卷","能常与爱人在一起","打球永不受伤","有用不完的流量","实现奶茶自由","吃遍学校美食","写一首歌","考到驾照","不被催稿","收集很多好听的歌曲","拍一套写真","坚持写日记","多一些惬意的时光","校园网不卡不断","学校的小动物们都健康","食堂阿姨手不抖","再不忘带宿舍钥匙","手机电脑不断电","背书过目不忘","抢票手速快","克制购物欲望","继续买买买","下课后总能找到自行车","一眼就能发现自己的外卖","去支教","参与志愿者活动","找到合适的兼职","获得心仪大学的offer","实习顺利","找到一份好工作","自己和身边人都要开心","看到南开园的春夏","早日脱下口罩","买到回家的票","抽奖锦鲤附体","Tony能听懂要求","被偶像翻牌","稿子一遍过",],
     
@@ -37,8 +37,8 @@ Page({
     this.setData({
       flag3:this.data.flags[r],
     })
-    wx.downloadFile({
-      url: this.data.imagePath,
+    wx.cloud.downloadFile({
+      fileID: this.data.imagePath,
       success:function(res){
         that.data.imagePath= res.tempFilePath;
       }
