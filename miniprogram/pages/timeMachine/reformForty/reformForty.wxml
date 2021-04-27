@@ -9,7 +9,7 @@
   <button class='bar-button side-button' hover-class='bar-button__hover' bindtap='bindConfirm'>确定</button>
 </view>
 <view class='container'>
-  <button class='bar-button' hover-class='bar-button__hover' bindtap="getUserProfile">>获取微信昵称</button>
+  <button class='bar-button' hover-class='bar-button__hover' bindtap="getUserProfile">获取微信昵称</button>
 </view>
 <view class='container row-flex'>
   <view class='half'>
