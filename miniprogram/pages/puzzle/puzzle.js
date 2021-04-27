@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    imageUrl: 'https://image.potatofield.cn/picturepuzzle/background01.jpg'
+    imageUrl: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/background01.jpg'
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

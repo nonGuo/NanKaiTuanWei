@@ -8,27 +8,27 @@ Page({
     img:[
       {
         id:'01.png',
-        address:'https://image.potatofield.cn/picturepuzzle/01.png',
+        address:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/01.png',
       },
       {
         id: '02.png',
-        address: 'https://image.potatofield.cn/picturepuzzle/02.png',
+        address: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/02.png',
       },
       {
         id: '03.png',
-        address: 'https://image.potatofield.cn/picturepuzzle/03.png',
+        address: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/03.png',
       },
       {
         id: '04.png',
-        address: 'https://image.potatofield.cn/picturepuzzle/04.png',
+        address: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/04.png',
       },
       {
-        id: '05.jpg',
-        address: 'https://image.potatofield.cn/picturepuzzle/05.jpg',
+        id: '05.png',
+        address: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/05.png',
       },
       {
         id: '06.png',
-        address: 'https://image.potatofield.cn/picturepuzzle/06.png',
+        address: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/06.png',
       }
     ]
   },

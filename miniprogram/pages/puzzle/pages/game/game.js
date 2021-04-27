@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pic: 'https://image.potatofield.cn/picturepuzzle/',
+    pic: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/',
     width:0,
     height:0,
     blocks:[
@@ -94,10 +94,6 @@ Page({
       var tmp2 = that.data.blocks[j].blockSrc
       var tmp3 = that.data.blocks[k].pos
       var tmp4 = that.data.blocks[k].blockSrc
-      console.log(tmp1)
-      console.log(tmp2)
-      console.log(tmp3)
-      console.log(tmp4)
       var str1 = 'blocks[' + j + '].pos'
       var str2 = 'blocks[' + k + '].pos'
       var str3 = 'blocks[' + j + '].blockSrc'
@@ -111,38 +107,7 @@ Page({
     }
   },
 
-  // handle: function (i, that) {
-  //   let context = wx.createCanvasContext('cut', that)
-  //   var index = 'blocks[' + i + '].blockSrc'
-  //   var destwidth = that.data.width / 3
-  //   var destheight = that.data.height / 3
-  //   var xpos = that.data.width / 3 * that.data.blocks[i].x
-  //   var ypos = that.data.height / 3 * that.data.blocks[i].y
-  //   context.drawImage(that.data.pic, xpos, ypos, destwidth, destheight)
-  //   context.draw(false, setTimeout(function () {
-  //     wx.canvasToTempFilePath({
-  //       destWidth: destwidth,
-  //       destHeight: destheight,
-  //       canvasId: 'cut',
-  //       success(res) {
-  //         that.setData({
-  //           [index]: res.tempFilePath
-  //         })
-  //         if (i < 8) {
-  //           that.handle(i + 1, that)
-  //         } else {
-  //           that.setData({
-  //             blocks: that.data.blocks
-  //           })
-  //         }
-  //       },
-  //     }, that)
-  //   }, 1000))
-  // },
   check:function(i,that){
-    // wx.navigateTo({
-    //   url: '../success/success?count=' + that.data.count,
-    // })
     if(i==9){
       wx.navigateTo({
         url: '../success/success?count='+that.data.count,
@@ -154,7 +119,8 @@ Page({
       return
     }
   },
-//pos 显示的图块编号 list 方格编号
+
+  //pos 显示的图块编号 list 方格编号
   move: function (e) {
     var now=this.data.count+1
     var vac=this.data.blank
@@ -189,7 +155,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      pic: 'https://image.potatofield.cn/picturepuzzle/' + options.id,
+      pic: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/' + options.id,
       id:options.id
     });
     wx.showToast({
@@ -202,36 +168,12 @@ Page({
     for(let i=0;i<9;i++){
       var str="blocks["+i+"].blockSrc"
       that.setData({
-        [str]: "https://image.potatofield.cn/picturepuzzle/" + that.data.id +"/GridImage-"+(i+1)+".png"
+        [str]: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/puzzle/" + that.data.id +"/GridImage-"+(i+1)+".png"
       })
     }
     setTimeout(function () {
       that.sortArr(that)
     },1000)
-    // console.log(that)
-    // console.log(this)
-    // wx.downloadFile({
-    //   url: that.data.pic,
-    //   success: function (res) {
-    //     var tempFilePath = res.tempFilePath;
-    //     that.setData({
-    //       pic: tempFilePath
-    //     })
-    //     wx.getImageInfo({
-    //       src: that.data.pic,
-    //       success: function (res) {
-    //         that.setData({
-    //           width: res.width,
-    //           height: res.height
-    //         })
-    //       }
-    //     })
-    //     that.handle(0, that)
-    //     setTimeout(function(){
-    //       that.sortArr(that)
-    //     },9000)
-    //   }
-    // })
   },
 
   
