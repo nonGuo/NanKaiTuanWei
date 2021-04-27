@@ -1,6 +1,6 @@
 /**index.wxss**/
 page {
-  background-image: url(http://image.potatofield.cn/youthDay/background.png);
+  background-image: url(https://6e61-nankaituanwei-j5pm1-1257843133.tcb.qcloud.la/resources/timeMachine/youthDay/background.png?sign=446355b1145448d6e83ed8729028a5e2&t=1618620027);
   background-position: bottom;
   background-size: cover;
   padding: 0;

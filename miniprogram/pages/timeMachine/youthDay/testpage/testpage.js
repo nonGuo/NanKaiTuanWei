@@ -12,7 +12,7 @@ Page({
     title: postData.question,
     chioce: postData.answer,
     pagenum: progressNum,
-    shareImg: 'https://image.potatofield.cn/youthDay/share.jpg'
+    shareImg: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/youthDay/share.jpg'
   },
   /*
    * 生命周期函数--监听页面加载

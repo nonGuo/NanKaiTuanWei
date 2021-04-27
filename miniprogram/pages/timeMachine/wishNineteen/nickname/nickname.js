@@ -4,9 +4,9 @@ Page({
 
   data: {
     wish: "好好学习，天天向上，争取尽早做一个日薪越亿的人！",
-    avatar: "https://image.potatofield.cn/18-10-21/43988906.jpg",
+    avatar: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/wishNineteen/43988906.png",
     nickname: "南开人",
-    imagePath: "https://image.potatofield.cn/18-11-14/76766161.jpg",
+    imagePath: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/wishNineteen/76766161.jpg",
   },
 
   //接收数据
@@ -17,8 +17,8 @@ Page({
       avatar: options.avatar,
       nickname: options.nickname,
     })
-    wx.downloadFile({
-      url: that.data.imagePath,
+    wx.cloud.downloadFile({
+      fileID: that.data.imagePath,
       success: function (res) {
         var tempFilePath = res.tempFilePath;
         that.setData({
@@ -166,4 +166,30 @@ Page({
       })
     }
   },
+  getUserProfile:function(){
+    let that=this;
+    wx.getUserProfile({
+      desc:'获取用户昵称',
+      success:async function(res){
+        wx.showToast({
+          title: '授权成功',
+          icon:'success',
+          mask:true,
+          duration:5000
+        });
+        that.setData({
+          nickname: res.userInfo.nickName,
+        })
+        that.createPoster()
+      },
+      fail:async function(res){
+        wx.showToast({
+          title: '授权失败',
+          icon: 'none',
+          duration: 1500
+        })
+      }
+    })
+  },
+
 })

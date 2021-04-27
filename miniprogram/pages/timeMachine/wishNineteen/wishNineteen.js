@@ -4,16 +4,16 @@ Page({
 
   data: {
     wish: "好好学习，天天向上，争取尽早做一个日薪越亿的人！",
-    avatar: "https://image.potatofield.cn/18-10-21/43988906.jpg",
+    avatar: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/wishNineteen/43988906.png",
     nickname: "南开人",
-    share: "https://image.potatofield.cn/18-11-14/32484390.jpg",
+    share: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/wishNineteen/32484390.jpg	",
   },
 
   //下载默认头像及分享图片至临时目录
   onLoad: function () {
     var that = this;
-    wx.downloadFile({
-      url: that.data.avatar,
+    wx.cloud.downloadFile({
+      fileID: that.data.avatar,
       success: function (res) {
         var tempFilePath = res.tempFilePath;
         that.setData({
@@ -21,8 +21,8 @@ Page({
         })
       }
     })
-    wx.downloadFile({
-      url: that.data.share,
+    wx.cloud.downloadFile({
+      fileID: that.data.share,
       success: function (res) {
         var tempFilePath = res.tempFilePath;
         that.setData({

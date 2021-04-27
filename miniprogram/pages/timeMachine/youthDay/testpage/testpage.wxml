@@ -1,8 +1,8 @@
 <!--pages/testpage/testpage.wxml-->
 <view class='testpage testpage-container'style="height:{{window_info.height}}px">
   <view class='testpage-head'>
-    <image class='testpage-left-head' src='http://image.potatofield.cn/youthDay/head.png'></image>
-    <image class='testpage-right-head' src='http://image.potatofield.cn/youthDay/head.png'></image>
+    <image class='testpage-left-head' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/youthDay/head.png'></image>
+    <image class='testpage-right-head' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/youthDay/head.png'></image>
   </view>
   <!--问题 -->
   <view class='testpage-question'>

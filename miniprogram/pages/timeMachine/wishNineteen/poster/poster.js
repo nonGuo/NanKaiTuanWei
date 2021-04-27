@@ -1,7 +1,7 @@
 Page({
 
   data: {
-    imagePath: "https://image.potatofield.cn/18-10-24/38697647.jpg",
+    imagePath: "",
   },
 
   //接受图片

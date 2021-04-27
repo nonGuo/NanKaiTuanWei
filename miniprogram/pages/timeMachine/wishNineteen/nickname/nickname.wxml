@@ -1,5 +1,5 @@
 <view class='container'>
-  <image class='logo' src='http://image.potatofield.cn/18-11-15/43203732.jpg'></image>
+  <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/wishNineteen/43203732.png'></image>
 </view>
 <view class='container instruction'>
   <text>郑重地签下自己的名字吧~</text>
@@ -9,7 +9,7 @@
   <button class='bar-button side-button' hover-class='bar-button__hover' bindtap='bindConfirm'>确定</button>
 </view>
 <view class='container'>
-  <button class='bar-button' hover-class='bar-button__hover' open-type='getUserInfo' bindgetuserinfo='bindGetNickname'>获取微信昵称</button>
+  <button class='bar-button' hover-class='bar-button__hover'  bindtap='getUserProfile'>获取微信昵称</button>
 </view>
 <view class='container'>
   <button class='bar-button return-button' hover-class='return-button__hover' bindtap='prev'>返回重选头像</button>

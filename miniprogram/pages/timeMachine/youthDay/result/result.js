@@ -3,8 +3,8 @@ const app = getApp();
 Page({
 
   data: {
-    imagePath: 'https://image.potatofield.cn/youthDay/result.png',
-    shareImg: 'https://image.potatofield.cn/youthDay/share.jpg'
+    imagePath: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/youthDay/result.png',
+    shareImg: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/youthDay/share.jpg'
   },
 
   /**
@@ -22,8 +22,8 @@ Page({
         })
       },
     });
-    wx.downloadFile({
-      url: this.data.shareImg,
+    wx.cloud.downloadFile({
+      fileID: this.data.shareImg,
       success: function (res) {
         var tempFilePath = res.tempFilePath;
         that.setData({
@@ -41,8 +41,8 @@ Page({
    */
   onReady: function () {
     let that = this
-    wx.downloadFile({
-      url: this.data.imagePath,
+    wx.cloud.downloadFile({
+      fileID: this.data.imagePath,
       success: function (res) {
         let image = res.tempFilePath;
         var context = wx.createCanvasContext('resultimage');

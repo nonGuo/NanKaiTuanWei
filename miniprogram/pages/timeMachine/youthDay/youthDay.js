@@ -2,7 +2,7 @@ const app = getApp()
 Page({
   data: {
     window_info:{},
-    shareImg: 'https://image.potatofield.cn/youthDay/share.jpg'
+    shareImg: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/youthDay/share.jpg'
   },
   testStart:function(){
     let that = this
@@ -37,8 +37,8 @@ Page({
         })
       },
     })
-    wx.downloadFile({
-      url: this.data.shareImg,
+    wx.cloud.downloadFile({
+      fileID: this.data.shareImg,
       success: function (res) {
         var tempFilePath = res.tempFilePath;
         that.setData({
