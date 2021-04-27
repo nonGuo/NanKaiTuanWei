@@ -34,14 +34,19 @@ Page({
   },
 
   //授权上传头像
-  bindGetUserInfo: async function (e) {
-    let avatar = await getAvatar(e);
-    if(avatar){
-      wx.redirectTo({
-        url: '../answer/answer?avatar=' + avatar + '&&background=' + this.data.background,
-      });
-    }
-  },
+  getUserProfile: async function(e) {
+    let that = this;
+    wx.getUserProfile({
+      desc: '获取微信头像',
+      success: async res => {
+        let avatar = await getAvatar(res);
+        if(avatar) {
+          wx.redirectTo({
+            url: '../answer/answer?avatar=' + avatar + '&&background=' + that.data.background,
+          })
+        }
+      }
+    })
+  }
 
-  
 })

@@ -14,7 +14,7 @@ Page({
     happiness:"",
     who:"",
     thing:"",
-    imagePaths:["https://image.potatofield.cn/NKYearBook/NKYearBookPosters03.png","https://image.potatofield.cn/NKYearBook/NKYearBookPosters04.png"],
+    imagePaths:["cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/graduate/NKYearBookPosters03.png","cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/graduate/NKYearBookPosters04.png"],
     imagePath:""
   },
 
@@ -30,8 +30,8 @@ Page({
     this.setData({
       imagePath:this.data.imagePaths[r]
     })
-    wx.downloadFile({
-      url: that.data.imagePath,
+    wx.cloud.downloadFile({
+      fileID: that.data.imagePath,
       success: function (res) {
         var tempFilePath = res.tempFilePath;
         that.setData({

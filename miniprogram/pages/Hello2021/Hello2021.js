@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shareImage:"https://6e61-nankaituanwei-j5pm1-1257843133.tcb.qcloud.la/resources/Hello2021/share.png",
+    shareImage:"cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/Hello2021/share.png",
     words:[
       "这难熬却又飞快流逝的2020",
       "已经进入了尾声",

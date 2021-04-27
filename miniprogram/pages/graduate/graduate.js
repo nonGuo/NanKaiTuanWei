@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imageUrl:"https://image.potatofield.cn/NKYearBook/NKYearBook02.png",
+    imageUrl:"cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/graduate/NKYearBook02.png",
     words:["时间有脚，会跨过漫长，回答关于成长；",
       "时间有耳，会听见声响，回答关于梦想；",
       "时间有嘴，会说出故事，回答关于生活；",
