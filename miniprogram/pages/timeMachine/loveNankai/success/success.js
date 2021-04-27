@@ -2,7 +2,7 @@
 Page({
 
   data: {
-    imagePath: 'https://image.potatofield.cn/18-10-30/35045931.jpg',
+    imagePath: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/35045931.jpg',
     nickname: '南开人',
     level: 'normal'
   },
@@ -12,14 +12,16 @@ Page({
     that.setData({
       level: options.level,
     })
-    wx.downloadFile({
-      url: that.data.imagePath,
-      success: function (res) {
+    wx.cloud.downloadFile({
+      //url: that.data.imagePath,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/35045931.jpg',
+      success:res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
           imagePath: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
   },
 

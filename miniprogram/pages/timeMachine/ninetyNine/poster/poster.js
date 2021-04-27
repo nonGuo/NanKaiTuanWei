@@ -1,7 +1,7 @@
 Page({
 
   data: {
-    imagePath: "https://image.potatofield.cn/18-10-24/38697647.jpg",
+    //imagePath: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/ninetyNine/38697647.jpg",
   },
 
   //接受图片

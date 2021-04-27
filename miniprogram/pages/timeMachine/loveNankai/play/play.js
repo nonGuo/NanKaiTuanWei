@@ -16,14 +16,14 @@ Page({
     Fa: "inactive",
     So: "inactive",
     La: "inactive",
-    fileLowSo: "https://image.potatofield.cn/LowSo.mp3",
-    fileLowSi: "https://image.potatofield.cn/LowSi.mp3",
-    fileDo: "https://image.potatofield.cn/Do.mp3",
-    fileRe: "https://image.potatofield.cn/Re.mp3",
-    fileMi: "https://image.potatofield.cn/Mi.mp3",
-    fileFa: "https://image.potatofield.cn/Fa.mp3",
-    fileSo: "https://image.potatofield.cn/So.mp3",
-    fileLa: "https://image.potatofield.cn/La.mp3",
+    fileLowSo: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSo.mp3",
+    fileLowSi: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSi.mp3",
+    fileDo: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Do.mp3",
+    fileRe: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Re.mp3",
+    fileMi: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Mi.mp3",
+    fileFa: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Fa.mp3",
+    fileSo: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSo.mp3",
+    fileLa: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/La.mp3",
   },
 
   onLoad: function (options) {
@@ -38,85 +38,100 @@ Page({
       icon: 'none',
       duration: 5000,
     })
-    wx.downloadFile({
-      url: that.data.fileLowSo,
+    wx.cloud.downloadFile({
+      //url: that.data.fileLowSo,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSo.mp3',
       type: 'audio',
-      success: function (res) {
+      success: res =>  {
         var tempFilePath = res.tempFilePath
         that.setData({
           fileLowSo: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
-    wx.downloadFile({
-      url: that.data.fileLowSi,
+    wx.cloud.downloadFile({
+     // url: that.data.fileLowSi,
+     fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSi.mp3',
       type: 'audio',
-      success: function (res) {
+      success: res =>{
         var tempFilePath = res.tempFilePath
         that.setData({
           fileLowSi: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
-    wx.downloadFile({
-      url: that.data.fileDo,
+    wx.cloud.downloadFile({
+      //url: that.data.fileDo,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Do.mp3',
       type: 'audio',
-      success: function (res) {
+      success:res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
           fileDo: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
-    wx.downloadFile({
-      url: that.data.fileRe,
+    wx.cloud.downloadFile({
+      //url: that.data.fileRe,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Re.mp3',
       type: 'audio',
-      success: function (res) {
+      success:res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
           fileRe: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
-    wx.downloadFile({
-      url: that.data.fileMi,
+    wx.cloud.downloadFile({
+      //url: that.data.fileMi,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Mi.mp3',
       type: 'audio',
-      success: function (res) {
+      success:res=>{
         var tempFilePath = res.tempFilePath
         that.setData({
           fileMi: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
-    wx.downloadFile({
-      url: that.data.fileFa,
+    wx.cloud.downloadFile({
+      //url: that.data.fileFa,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Fa.mp3',
       type: 'audio',
-      success: function (res) {
+      success:res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
           fileFa: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
-    wx.downloadFile({
-      url: that.data.fileSo,
+    wx.cloud.downloadFile({
+     fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/So.mp3',
       type: 'audio',
-      success: function (res) {
+      success:res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
           fileSo: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
-    wx.downloadFile({
-      url: that.data.fileLa,
+    wx.cloud.downloadFile({
+      //url: that.data.fileLa,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/La.mp3',
       type: 'audio',
-      success: function (res) {
+      success: res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
           fileLa: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
     setTimeout(function () {
       wx.hideToast()

@@ -2,26 +2,28 @@ Page({
 
   data: {
     wish: "允公允能，日新月异",
-    avatar: "https://image.potatofield.cn/18-10-21/43988906.jpg",
+    avatar: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/ninetyNine/43988906.jpg",
     nickname: "南开人",
-    share: "https://image.potatofield.cn/18-10-24/70437359.jpg",
+    share: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/ninetyNine/70437359.jpg",
   },
 
   //下载默认头像及分享图片至临时目录
   onLoad: function () {
     var that = this;
-    wx.downloadFile({
-      url: that.data.avatar,
-      success: function (res) {
+    wx.cloud.downloadFile({
+      //url: that.data.avatar,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/ninetyNine/43988906.jpg',
+      success: res =>{
         var tempFilePath = res.tempFilePath;
         that.setData({
           avatar: tempFilePath
         })
       }
     })
-    wx.downloadFile({
-      url: that.data.share,
-      success: function (res) {
+    wx.cloud.downloadFile({
+      //url: that.data.share,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/ninetyNine/70437359.jpg',
+    success:res => {
         var tempFilePath = res.tempFilePath;
         that.setData({
           share: tempFilePath

@@ -4,40 +4,43 @@ Page({
   data: {
     wish: "修得莲心不染尘",
     showLotusHolder: false,
-    avatar: "https://image.potatofield.cn/18-10-21/43988906.jpg",
+    avatar: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lotus/43988906.jpg",
     name: "一位神秘的南开人",
-    background: "https://image.potatofield.cn/18-10-27/44879622.jpg",
-    shareImage: "https://image.potatofield.cn/18-10-28/76412157.jpg",
+    background: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lotus/44879622.jpg",
+    shareImage: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lotus/76412157.jpg",
   },
 
   onLoad: function() {
     var that = this;
-    wx.downloadFile({
-      url: that.data.avatar,
-      success: function(res) {
+    wx.cloud.downloadFile({
+     fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lotus/43988906.jpg',
+      success:res=> {
         var tempFilePath = res.tempFilePath;
         that.setData({
           avatar: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
-    wx.downloadFile({
-      url: that.data.background,
-      success: function(res) {
+    wx.cloud.downloadFile({
+     fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lotus/44879622.jpg',
+      success: res=>{
         var tempFilePath = res.tempFilePath;
         that.setData({
           background: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
-    wx.downloadFile({
-      url: that.data.shareImage,
-      success: function (res) {
+    wx.cloud.downloadFile({
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lotus/76412157.jpg',
+      success:res=> {
         var tempFilePath = res.tempFilePath;
         that.setData({
           shareImage: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
   },
 
@@ -173,27 +176,36 @@ Page({
   },
 
   //获取授权并绘制
-  bindGetUserInfo: function(e) {
+  getUserProfile: async function(e) { 
     var that = this
-    if (e.detail.userInfo) {
-      wx.showToast({
-        title: '已获得头像',
-        icon: 'success',
-        duration: 5000,
-      })
-      that.setData({
-        name: e.detail.userInfo.nickName,
-        avatar: e.detail.userInfo.avatarUrl
-      })
-      wx.downloadFile({
-        url: e.detail.userInfo.avatarUrl,
-        success: function (res) {
-          that.setData({
-            avatar: res.tempFilePath
+    
+  wx.getUserProfile({
+    desc: '获取授权',
+    success: async function (res) {
+          wx.showToast({
+            title: '已获得头像',
+            icon: 'success',
+            duration: 5000,
           })
-        }
-      })
-    }
+          that.setData({
+            name:res.userInfo.nickName,
+            avatar: res.userInfo.avatarUrl
+          })
+          wx.downloadFile({
+           url:res.userInfo.avatarUrl,
+           success: async function (res){
+              that.setData({
+                avatar: res.tempFilePath
+              })
+            },
+            fail: console.error
+          })
+       
+      }
+    })
+    
+
+
     wx.showToast({
       title: '正在绘图',
       icon: 'loading',
@@ -208,5 +220,7 @@ Page({
         showLotusHolder: true
       });
     }, 5000)
+
   },
+  
 })

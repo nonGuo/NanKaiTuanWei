@@ -15,7 +15,8 @@
   </view>
 </view>
 <view class='container'>
-  <button class='bar-button' hover-class='bar-button__hover' open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'>生成邀请函</button>
+  <button class='bar-button' hover-class='bar-button__hover' 
+  bindtap="getUserProfile">生成邀请函</button>
 </view>
 <view class='container row-flex'>
   <view class='half'>

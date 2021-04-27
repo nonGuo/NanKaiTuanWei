@@ -2,19 +2,21 @@
 Page({
 
   data: {
-    shareImage: 'https://image.potatofield.cn/18-10-30/5857730.jpg'
+    shareImage: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/5857730.jpg'
   },
 
   onLoad: function (options) {
     var that = this;
-    wx.downloadFile({
-      url: that.data.shareImage,
-      success: function (res) {
+    wx.cloud.downloadFile({
+     // url: that.data.shareImage,
+     fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/5857730.jpg',
+      success: res =>{
         var tempFilePath = res.tempFilePath
         that.setData({
           shareImage: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
   },
 

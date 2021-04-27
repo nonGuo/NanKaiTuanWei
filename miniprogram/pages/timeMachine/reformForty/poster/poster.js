@@ -1,8 +1,8 @@
 Page({
 
   data: {
-    imagePath: 'https://image.potatofield.cn/18-11-14/43294796.jpg',
-    shareImage: 'https://image.potatofield.cn/18-11-14/94799488.jpg'
+   // imagePath: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/reformForty/43294796.jpg',
+    shareImage: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/reformForty/94799488.jpg'
   },
 
   onLoad: function (options) {
@@ -11,14 +11,15 @@ Page({
       nickname: options.nickname,
       imagePath: options.imagePath
     })
-    wx.downloadFile({
-      url: that.data.shareImage,
-      success: function (res) {
+    wx.cloud.downloadFile({
+     fileID:this.data.shareImage,
+      success:res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
-          shareImage: tempFilePath
+          shareImage:tempFilePath
         })
-      }
+      },
+      fail:console.error
     })
   },
 

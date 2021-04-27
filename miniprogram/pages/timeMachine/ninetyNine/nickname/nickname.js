@@ -2,9 +2,9 @@ Page({
 
   data: {
     wish: "允公允能，日新月异",
-    avatar: "https://image.potatofield.cn/18-10-21/43988906.jpg",
+    avatar: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/ninetyNine/43988906.jpg",
     nickname: "南开人",
-    imagePath: "https://image.potatofield.cn/18-10-24/38697647.jpg",
+    imagePath: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/ninetyNine/38697647.jpg",
   },
 
   //接收数据
@@ -15,9 +15,10 @@ Page({
       avatar: options.avatar,
       nickname: options.nickname,
     })
-    wx.downloadFile({
-      url: that.data.imagePath,
-      success: function (res) {
+    wx.cloud.downloadFile({
+      //url: that.data.imagePath,
+      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/ninetyNine/38697647.jpg',
+      success: res => {
         var tempFilePath = res.tempFilePath;
         that.setData({
           imagePath: tempFilePath
@@ -127,20 +128,23 @@ Page({
   },
 
   //授权获得昵称
-  bindGetNickname: function(e) {
+  getUserProfile: async function(e) {
     var that = this;
-    if (e.detail.userInfo) {
+    wx.getUserProfile({
+      desc: '获取微信昵称',
+      success: async res =>{
       that.setData({
-        nickname: e.detail.userInfo.nickName,
+        nickname: res.userInfo.nickName,
       })
       that.createPoster()
-    }
-    else {
+    },
+    fail: err =>{
       wx.showToast({
         title: '授权失败',
         icon: 'none',
         duration: 1500
       })
     }
+  })
   },
 })

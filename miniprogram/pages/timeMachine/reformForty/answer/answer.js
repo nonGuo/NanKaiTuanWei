@@ -4,7 +4,7 @@ Page({
     nickname: '南开人',
     page: 0,
     score: 0,
-    imagePath: 'https://image.potatofield.cn/18-11-14/43294796.jpg',
+    imagePath:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/reformForty/43294796.jpg',
     questionBank: [
       { question: "增强金融服务实体经济能力，提高直接融资比重，促进多层次资本市场健康发展，需要深化_____改革", selectA: "金融体制", selectB: "经济体制", selectC: "财税体制", selectD: "资本市场", answer: "A" },
       { question: "加快完善社会主义市场经济体制，要完善促进消费的体制机制，增强消费对经济发展的_____作用", selectA: "指导性", selectB: "关键性", selectC: "基础性", selectD: "主导性", answer: "C" },
@@ -122,9 +122,9 @@ Page({
   onLoad: function (options) {
     var that = this
     that.selectQuestions()
-    wx.downloadFile({
-      url: that.data.imagePath,
-      success: function (res) {
+    wx.cloud.downloadFile({
+     fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/reformForty/43294796.jpg',
+     success: res =>{
         var tempFilePath = res.tempFilePath
         that.setData({
           imagePath: tempFilePath

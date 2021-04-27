@@ -2,18 +2,19 @@
 Page({
 
   data: {
-    imageUrl: 'https://image.potatofield.cn/18-11-14/94799488.jpg',
+    imageUrl: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/reformForty/94799488.jpg',
     nickname: '南开人'
   },
 
   onLoad: function () {
     var that = this
-    wx.downloadFile({
-      url: this.data.imageUrl,
-      success: function (res) {
+    wx.cloud.downloadFile({
+     // url: this.data.imageUrl,
+     fileID:this.data.imageUrl,
+      success: res=>{
         var tempFilePath = res.tempFilePath;
         that.setData({
-          imageUrl: tempFilePath
+          imageUrl:tempFilePath
         })
       }
     })
@@ -43,21 +44,24 @@ Page({
   },
 
   //授权获得昵称
-  bindGetNickname: function (e) {
+  getUserProfile: async function(e)  {
     var that = this;
-    if (e.detail.userInfo) {
+    wx.getUserProfile({
+      desc: '获取微信昵称',
+      success: async res => {
       that.setData({
-        nickname: e.detail.userInfo.nickName,
+        nickname:res.userInfo.nickName,
       })
       that.gotoAnswer()
-    }
-    else {
+    },
+   fail:err=> {
       wx.showToast({
         title: '授权失败',
         icon: 'none',
         duration: 1500
       })
-    }
+  }
+})
   },
 
   onShareAppMessage: function () {

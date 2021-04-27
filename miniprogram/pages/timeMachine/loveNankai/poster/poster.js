@@ -2,8 +2,8 @@
 Page({
 
   data: {
-    imagePath: 'https://image.potatofield.cn/18-10-30/35045931.jpg',
-    shareImage: 'https://image.potatofield.cn/18-10-30/5857730.jpg'
+    imagePath: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/35045931.jpg',
+    shareImage: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/5857730.jpg'
   },
 
   onLoad: function (options) {
@@ -11,14 +11,16 @@ Page({
     that.setData({
       imagePath: options.imagePath,
     })
-    wx.downloadFile({
-      url: that.data.shareImage,
-      success: function (res) {
+    wx.cloud.downloadFile({
+     // url: that.data.shareImage,
+     fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/5857730.jpg',
+      success:res=> {
         var tempFilePath = res.tempFilePath
         that.setData({
           shareImage: tempFilePath
         })
-      }
+      },
+      fail: console.error
     })
   },
 
