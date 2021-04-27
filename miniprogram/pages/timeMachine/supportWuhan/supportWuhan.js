@@ -4,15 +4,15 @@ const util = require('../../../utils/util.js')
 Page({
 
   data: {
-    avatar: "https://image.potatofield.cn/18-10-21/43988906.jpg",
+    avatar: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/supportWuhan/avatar.png",
     background: [],
-    share: "https://image.potatofield.cn/whjy/whjy02.jpg",
+    share: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/supportWuhan/whjy02.jpg",
     showAvatarHolder: false,
     photo: [
-      "https://image.potatofield.cn/whyj/wuhanjy.png",
-      "https://image.potatofield.cn/whyj/zhongguojy.png",
-      "https://image.potatofield.cn/whyj/wuhanbs.png",
-      "https://image.potatofield.cn/whyj/zhongguobs.png",
+      "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/supportWuhan/wuhanjy.png",
+      "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/supportWuhan/zhongguojy.png",
+      "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/supportWuhan/wuhanbs.png",
+      "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/supportWuhan/zhongguobs.png",
     ],
     current: 0
   },
@@ -20,7 +20,7 @@ Page({
   //下载默认头像，背景图及分享图至临时目录
   onLoad: function () {
     var that = this;
-    wx.downloadFile({
+    wx.cloud.downloadFile({
       url: that.data.avatar,
       success: function (res) {
         var tempFilePath = res.tempFilePath;
@@ -31,8 +31,8 @@ Page({
     })
     var tempFilePathList = [];
     for(let i = 0; i < 4; i++) {
-      wx.downloadFile({
-        url:that.data.photo[i],
+      wx.cloud.downloadFile({
+        fileID:that.data.photo[i],
         success: function(res) {
           tempFilePathList[i] = res.tempFilePath;
         }
@@ -41,7 +41,7 @@ Page({
     this.setData({
       background: tempFilePathList
     })
-    wx.downloadFile({
+    wx.cloud.downloadFile({
       url: that.data.share,
       success: function (res) {
         var tempFilePath = res.tempFilePath;
@@ -184,84 +184,81 @@ Page({
   },
 
   //授权上传头像
-  bindGetUserInfo: async function (e) {
-    var that = this;
-    //成功获取授权
-    if (e.detail.userInfo) {
-      wx.showToast({
-        title: '授权成功',
-        icon: 'success',
-        mask: true,
-        duration: 5000
-      })
-      that.setData({
-        name: e.detail.userInfo.nickName,
-        avatar: e.detail.userInfo.avatarUrl
-      })
-      wx.downloadFile({
-        url: e.detail.userInfo.avatarUrl,
-        success: async function (res) {
-          //把照片传给avatar用来绘图
-          that.setData({
-            avatar: res.tempFilePath,
-          })
-          let ifUpload = await util.uploadPhoto(that.data.avatar)
-        if (!ifUpload) {
-          // 上传失败
-          wx.showToast({
-          title: '上传图片失败!',
-          icon: 'none',
-          duration: 1500
-          })
-          return
-        }
-        let verifyResult = await util.verifyRes(ifUpload, that.data.avatar.match(app.globalData.storePattern)[1])
-        if (verifyResult.result.errCode != 0) {
-          that.setData({
-            avatar: ''
-          })
-          wx.showToast({
-            title: '您的图片未能过审!',
-            icon: 'none',
-            duration: 2000,
-          })
-          return
-        }
-          //提示框
-          wx.showToast({
-            title: '正在绘图',
-            icon: 'loading',
-            mask: true,
-            duration: 5000
-          })
-          //canvas绘图
-          that.createAvatar();
-          //延迟显示图片
-          setTimeout(function () {
-            wx.hideToast();
+  getUserProfile: async function(e) {
+    let that=this;
+    wx.getUserProfile({
+      desc: '获取微信头像',
+      success: async res => {
+        wx.showToast({
+          title: '授权成功',
+          icon: 'success',
+          mask: true,
+          duration: 5000
+        });
+        that.setData({
+          name:res.userInfo.nickName,
+          avatar:res.userInfo.avatarUrl
+        })
+        wx.downloadFile({
+          url: that.data.avatar,
+          success: async function (res) {
+            //把照片传给avatar用来绘图
             that.setData({
-              showAvatarHolder: true
-            });
-          }, 4000)
-        },
-        //下载头像失败
-        fail: function (res) {
-          wx.showToast({
-            title: '头像获取失败',
+              avatar: res.tempFilePath,
+            })
+            let ifUpload = await util.uploadPhoto(that.data.avatar)
+          if (!ifUpload) {
+            // 上传失败
+            wx.showToast({
+            title: '上传图片失败!',
             icon: 'none',
             duration: 1500
-          })
-        }
-      })
-    }
-    //获取授权失败
-    else {
-      wx.showToast({
-        title: '授权失败',
-        icon: 'none',
-        duration: 1500
-      })
-    }
+            })
+            return
+          }
+          let verifyResult = await util.verifyRes(ifUpload, that.data.avatar.match(app.globalData.storePattern)[1])
+          if (verifyResult.result.errCode != 0) {
+            that.setData({
+              avatar: ''
+            })
+            wx.showToast({
+              title: '您的图片未能过审!',
+              icon: 'none',
+              duration: 2000,
+            })
+            return
+          }
+            //提示框
+            wx.showToast({
+              title: '正在绘图',
+              icon: 'loading',
+              mask: true,
+              duration: 5000
+            })
+            //canvas绘图
+            
+            that.createAvatar();
+            //延迟显示图片
+            setTimeout(function () {
+              wx.hideToast();
+              that.setData({
+                showAvatarHolder: true
+              });
+            }, 4000)
+          },
+          //下载头像失败
+          fail: function (res) {
+            wx.showToast({
+              title: '头像获取失败',
+              icon: 'none',
+              duration: 1500
+            })
+          }
+        })
+      }
+
+      }
+    )
   },
 
   //返回首页
@@ -339,8 +336,6 @@ Page({
       icon: 'none',
       duration: 1500
     })
-    // that.context.clearRect(0,0,600,600);
-    // that.context.draw();
   },
 
   //分享

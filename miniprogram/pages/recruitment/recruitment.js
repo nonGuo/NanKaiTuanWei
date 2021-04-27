@@ -21,7 +21,6 @@ Page({
               position:p
             })
           }
-        console.log(p)
         },p*100
       )
     }

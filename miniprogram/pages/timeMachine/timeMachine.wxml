@@ -1,5 +1,5 @@
 <view class='container'>
-  <image class='logo' src='http://image.potatofield.cn/18-10-27/57751256.jpg'></image>
+  <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/logo.png'></image>
 </view>
 <view class='container'>
   <view class='title'>
@@ -22,7 +22,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoSupportWuhan'>
-    <image class='button-image' src='https://image.potatofield.cn/whjy/whjyscq.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/supportWuhan.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -36,7 +36,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoNankaiQs'>
-    <image class='button-image' src='https://image.potatofield.cn/NankaiQs/NankaiQsTitle.png'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/NankaiQs.png'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -50,7 +50,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoNankai100'>
-    <image class='button-image' src='https://image.potatofield.cn/Nankai100/share.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/Nankai100.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -64,7 +64,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoLaborDay2019'>
-    <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.png'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/laborDay2019.png'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -78,7 +78,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoLottery'>
-    <image class='button-image' src='http://image.potatofield.cn/18-11-21/4426294.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lottery.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -92,7 +92,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoQingming'>
-    <image class='button-image' src='http://image.potatofield.cn/%E9%A6%96%E9%A1%B5%E5%9B%BE.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/qingming.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -106,7 +106,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoYouthDay'>
-    <image class='button-image' src='http://image.potatofield.cn/youthDay/index.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/youthDay.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -120,7 +120,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoFlagNineteen'>
-    <image class='button-image' src='http://image.potatofield.cn/18-11-14/10587524.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/wishNineteen.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -134,7 +134,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoByeEighteen'>
-    <image class='button-image' src='http://image.potatofield.cn/18-12-17/54929529.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/wishNineteen.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -148,7 +148,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoReformForty'>
-    <image class='button-image' src='http://image.potatofield.cn/18-11-14/8563060.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/reformForty.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -162,7 +162,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoLoveNankai'>
-    <image class='button-image' src='http://image.potatofield.cn/18-10-30/56121876.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -176,7 +176,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoNinetyNine'>
-    <image class='button-image' src='http://image.potatofield.cn/18-10-27/95144105.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/ninetyNine.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
@@ -190,7 +190,7 @@
 </view>
 <view class='container'>
   <button class='block-button' bindtap='gotoLotus'>
-    <image class='button-image' src='http://image.potatofield.cn/18-10-28/73068552.jpg'></image>
+    <image class='button-image' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/lotus.jpg'></image>
     <view class='button-mask' hover-class='button-mask__hover'></view>
   </button>
 </view>
