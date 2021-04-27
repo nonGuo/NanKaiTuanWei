@@ -12,7 +12,7 @@
     <button class='bar-button' hover-class='bar-button__hover' bindtap='fromAlbum'>打开相册选择</button>
   </view>
   <view class='half'>
-    <button class='bar-button' hover-class='bar-button__hover' open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'>使用微信头像</button>
+    <button class='bar-button' hover-class='bar-button__hover' bindtap="getUserProfile">使用微信头像</button>
   </view>
 </view>
 <view class='container'>

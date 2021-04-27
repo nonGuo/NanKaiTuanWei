@@ -158,25 +158,30 @@ Page({
   },
 
   //授权上传头像
-  bindGetUserInfo: async function (e) {
-    let that  = this;
-    this.data.avatar = await tools.getAvatar(e);
-    if(this.data.avatar){
-      wx.showToast({
-        title: '正在绘图',
-        icon: 'loading',
-        mask: true,
-        duration: 10000
-      })
-      this.createAvatar(this.data.current);
-      //延迟显示图片
-      setTimeout(function () {
-        wx.hideToast();
-        that.setData({
-          showAvatarHolder: true
-        });
-      }, 4000)
-    }
+  getUserProfile: async function (e) {
+    let that=this;
+    wx.getUserProfile({
+      desc: '获取微信头像',
+      success: async res => {
+        that.data.avatar = await tools.getAvatar(res);
+        if(this.data.avatar){
+          wx.showToast({
+            title: '正在绘图',
+            icon: 'loading',
+            mask: true,
+            duration: 10000
+          })
+          this.createAvatar(this.data.current);
+          //延迟显示图片
+          setTimeout(function () {
+            wx.hideToast();
+            that.setData({
+              showAvatarHolder: true
+            });
+          }, 4000)
+        }
+      }
+    })
   },
 
   //返回首页
