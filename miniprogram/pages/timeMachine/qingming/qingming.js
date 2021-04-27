@@ -107,8 +107,8 @@ Page({
   //显示文字
   onLoad: function () {
     let that = this
-    wx.downloadFile({
-      url: 'https://image.potatofield.cn/%E5%88%86%E4%BA%AB%E5%9B%BE.jpg',
+    wx.cloud.downloadFile({
+      fileID: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/qingming/share.jpg',
       success: function (res) {
         let share = res.tempFilePath
         that.setData({
@@ -121,8 +121,8 @@ Page({
       content: '您是否希望开启背景音乐？',
       success: function(res) {
         if (res.confirm) {
-          wx.downloadFile({
-            url: 'https://music.163.com/song/media/outer/url?id=1943186.mp3',
+          wx.cloud.downloadFile({
+            fileID: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/qingming/obj_w5zDlMODwrDDiGjCn8Ky_3058441660_4dfc_2b15_5c7f_e691bd653f2699993a3f6121d98706c5.mp3',
             success: function (res) {
               let music = wx.createInnerAudioContext()
               music.src = res.tempFilePath

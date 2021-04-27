@@ -12,8 +12,8 @@ Page({
       name:options.name
     })
 
-    wx.downloadFile({
-      url: 'https://image.potatofield.cn/%E5%88%86%E4%BA%AB%E5%9B%BE.jpg',
+    wx.cloud.downloadFile({
+      fileID: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/qingming/share.jpg',
       success: function (res) {
         let share = res.tempFilePath
         that.setData({
@@ -78,8 +78,8 @@ Page({
       icon: 'loading',
       duration: 10000,
     })
-    wx.downloadFile({
-      url: 'https://image.potatofield.cn/%E6%B5%B7%E6%8A%A5.jpg',
+    wx.cloud.downloadFile({
+      fileID: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/qingming/haibao.jpg',
       success: function (res) {
         let background = res.tempFilePath
         that.setData({
