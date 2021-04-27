@@ -1,5 +1,5 @@
 <view class='container'>
-  <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/wishNineteen/43861035.png'></image>
+  <image class='logo' src='cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/user.jpg'></image>
 </view>
 <view class='container instruction'>
   <text>你需要选择一张图片作为许愿签上的头像哦~</text>
