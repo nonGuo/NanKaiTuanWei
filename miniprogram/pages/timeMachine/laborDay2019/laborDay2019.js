@@ -21,9 +21,18 @@ Page({
     place_chosen:0,
     z_index:-100,
     image_path:"",
-    shareImage: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/share.png'
+    shareImage: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/share.png',
+    /////////////////////////////////////////////////////////////
+    images:{
+      title1: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/title-1.png",
+      title2: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/title-2.png",
+      cloud1: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/cloud1.png",
+      cloud3: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/cloud3.png",
+      paperplane: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/paperplane.png",
+      button: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/button.png",
+    }
   },
-  onLoad:function(){
+  onLoad:async function(){
     //调用wx.getSystemInfo接口,获取屏幕大小
     var that = this;
     wx.cloud.downloadFile({
@@ -32,7 +41,6 @@ Page({
         that.setData({
           shareImage: res.tempFilePath
         })
-        
       }
     })
     wx.getSystemInfo({
@@ -46,6 +54,27 @@ Page({
       },
     });
     app.globalData.screeninfo = this.data.screeninfo;
+    
+    let downloadList = []
+    for(let item in this.data.images){
+      downloadList.push(new Promise((resolve, reject) => {
+        wx.cloud.downloadFile({
+          fileID: that.data.images[item],
+          success: res => {
+            that.data.images[item] = res.tempFilePath
+            resolve(res.tempFilePath)
+          }
+        })
+      }))
+    }
+    // 所有图片加载完再显示
+    Promise.all(downloadList).then(res => {
+      this.createAnimation()
+    })
+  },
+
+
+  createAnimation: function () {
     var ani_1 = wx.createAnimation({
       duration: 800,
       timingFunction: 'ease',
@@ -120,10 +149,6 @@ Page({
       blah_animation_3: ani_8.export(),
       button_animation: ani_9.export()
     });
-
-  },
-  onReady: function () {
-
   },
 
   chouqian:function(){
