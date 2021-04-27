@@ -12,7 +12,7 @@ Page({
     place_chosen:0,
     place_info:{},
     image_path: '',
-    shareImage: 'https://image.potatofield.cn/%E5%88%86%E4%BA%AB%E5%9B%BE.png'
+    shareImage: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/share.png'
   },
 
   /**

@@ -1,16 +1,16 @@
 var images = [
-  "http://image.potatofield.cn/EFV9A0.png",
-  "http://image.potatofield.cn/EFVS7q.png",
-  "http://image.potatofield.cn/EFVF9U.png",
-  "http://image.potatofield.cn/EFVPhT.png",
-  "http://image.potatofield.cn/EFVCNV.png",
-  "http://image.potatofield.cn/EFVk3F.png",
-  "http://image.potatofield.cn/EFVAc4.png",
-  "http://image.potatofield.cn/EFVEjJ.png",
-  "http://image.potatofield.cn/EFVZu9.png",
-  "http://image.potatofield.cn/EFVeBR.png",
-  "http://image.potatofield.cn/EFVuAx.png",
-  "http://image.potatofield.cn/EFVmH1.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFV9A0.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVS7q.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVF9U.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVPhT.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVCNV.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVk3F.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVAc4.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVEjJ.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVZu9.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVeBR.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVuAx.png",
+  "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/EFVmH1.png",
 ]
 
 module.exports={

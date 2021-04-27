@@ -5,7 +5,7 @@
   <!--位置-->
   <view wx:if="{{place_info.position!=''}}" class='tutorial-text-container'>  
     <view class='tutorial-text-title'>
-      <icon class='iconfont icon-weizhi'></icon>
+      <icon class='icon-font icon-weizhi'></icon>
       <text> 位置</text>
       </view>
     <view class='tutorial-text-content'>
@@ -16,7 +16,7 @@
   <!--路线-->
   <view wx:if="{{place_info.route.hasroute}}" class='tutorial-text-container'>  
     <view class='tutorial-text-title'>
-      <icon class='iconfont icon-luxian'></icon>
+      <icon class='icon-font icon-luxian'></icon>
       <text> 路线</text>
     </view>
     <view class='tutorial-text-content'>
@@ -40,22 +40,22 @@
   <!--交通-->
   <view wx:if="{{place_info.transportation.metro+place_info.transportation.bus+place_info.transportation.station!=''}}" class='tutorial-text-container'>
     <view class='tutorial-text-title'>
-      <icon class='iconfont icon-jiaotongchuhang'></icon>
+      <icon class='icon-font icon-jiaotongchuhang'></icon>
       <text> 附近的交通枢纽</text>
     </view>
     <view class='tutorial-text-content'>
       <view wx:if="{{place_info.transportation.metro!=''}}">
-        <icon class='iconfont icon-ditie'></icon>
+        <icon class='icon-font icon-ditie'></icon>
         <text class='tutorial-transportation-title'> 地铁站</text>
         <view class='tutorial-transportation-content'>{{place_info.transportation.metro}}</view>
       </view>
       <view wx:if="{{place_info.transportation.bus!=''}}">
-       <icon class='iconfont icon-gongjiao'></icon> 
+       <icon class='icon-font icon-gongjiao'></icon> 
        <text class='tutorial-transportation-title'> 公交站</text>
        <view class='tutorial-transportation-content'>{{place_info.transportation.bus}}</view>
       </view>
       <view wx:if="{{place_info.transportation.station!=''}}">
-        <icon class='iconfont icon-huochezhan'></icon> 
+        <icon class='icon-font icon-huochezhan'></icon> 
         <text class='tutorial-transportation-title'> 火车站</text>
         <view class='tutorial-transportation-content'>{{place_info.transportation.station}}</view>
       </view>
@@ -65,7 +65,7 @@
   <!--TIPS-->
   <view wx:if="{{place_info.tips!=''}}" class='tutorial-text-container'>
     <view class='tutorial-text-title'>
-      <icon class='iconfont icon-tips'></icon>
+      <icon class='icon-font icon-tips'></icon>
       <text> TIPS</text>
     </view>
     <view class='tutorial-text-content' style='margin-right:10px;color:rgba(0,0,0,0.8);'>

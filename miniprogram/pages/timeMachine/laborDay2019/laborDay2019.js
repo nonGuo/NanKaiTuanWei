@@ -21,17 +21,18 @@ Page({
     place_chosen:0,
     z_index:-100,
     image_path:"",
-    shareImage: 'https://image.potatofield.cn/%E5%88%86%E4%BA%AB%E5%9B%BE.png'
+    shareImage: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/share.png'
   },
   onLoad:function(){
     //调用wx.getSystemInfo接口,获取屏幕大小
     var that = this;
-    wx.downloadFile({
-      url: that.data.shareImage,
+    wx.cloud.downloadFile({
+      fileID: that.data.shareImage,
       success: function (res) {
         that.setData({
           shareImage: res.tempFilePath
         })
+        
       }
     })
     wx.getSystemInfo({

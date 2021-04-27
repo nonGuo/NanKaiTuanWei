@@ -7,10 +7,11 @@
   url('iconfont.svg?t=1555325951472#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.iconfont {
+.icon-font {
   font-family: "iconfont" !important;
   font-size: 18px;
   font-style: normal;
+  padding: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -38,6 +39,7 @@
 .icon-weizhi:before {
   content: "\e60d";
 }
+
 
 .icon-luxian:before {
   content: "\e63c";
