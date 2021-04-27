@@ -3,7 +3,7 @@ const util = require('../../../../utils/util.js')
 Page({
 
   data: {
-    avatar: "https://image.potatofield.cn/18-10-21/43988906.jpg",
+    avatar: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/defaultAvatar.jpg",
   },
   
   //接受昵称

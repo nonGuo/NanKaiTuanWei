@@ -8,7 +8,7 @@ Page({
     remain: "",
     wish: "",
     finish: false,
-    nkLogo: 'https://image.potatofield.cn/Nankai100/NK-100.png',
+    nkLogo: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/Nankai100/NK-100.png',
   },
 
 

@@ -19,11 +19,11 @@ Page({
     },
     name: "",
     showCertificate: false,
-    checkImage: 'https://image.potatofield.cn/Nankai100/check.png',
-    background: "https://image.potatofield.cn/Nankai100/NK-100.png",
-    shareImage:"https://image.potatofield.cn/Nankai100/share.jpg",
+    checkImage: 'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/Nankai100/check.png',
+    background: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/Nankai100/NK-100.png",
+    shareImage:"cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/Nankai100/share.jpg",
     createCertificate_button:"disabled",//按钮默认为不可点击
-    imagePath:"https://image.potatofield.cn/Nankai100/certificate.jpg" //这里对应的是证书图片!!
+    imagePath:"cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/Nankai100/certificate.jpg" //这里对应的是证书图片!!
   },
 
   //返回页面
@@ -193,7 +193,7 @@ Page({
   //生成证书canvas
   createCertificateCanvas:function() {
     var context = wx.createCanvasContext('certificateCanvas', this);
-    context.drawImage('https://image.potatofield.cn/Nankai100/certificate.jpg');
+    context.drawImage(this.data.imagePath);
     context.draw();
   },
 
@@ -289,8 +289,8 @@ Page({
   //保存至相册
   save: function () {
     var that = this
-    wx.downloadFile({
-      url:that.data.imagePath,
+    wx.cloud.downloadFile({
+      fileID:that.data.imagePath,
       success(res){
         wx.saveImageToPhotosAlbum({
           filePath: res.tempFilePath,

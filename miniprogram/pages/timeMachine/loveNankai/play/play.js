@@ -8,6 +8,16 @@ Page({
     level: "nomal",
     speed: 500,
     chances: 0,
+    // button: {
+    //   LowSo: "inactive",
+    //   LowSi: "inactive",
+    //   Do: "inactive",
+    //   Re: "inactive",
+    //   Mi: "inactive",
+    //   Fa: "inactive",
+    //   So: "inactive",
+    //   La: "inactive",
+    // },
     LowSo: "inactive",
     LowSi: "inactive",
     Do: "inactive",
@@ -16,14 +26,16 @@ Page({
     Fa: "inactive",
     So: "inactive",
     La: "inactive",
-    fileLowSo: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSo.mp3",
-    fileLowSi: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSi.mp3",
-    fileDo: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Do.mp3",
-    fileRe: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Re.mp3",
-    fileMi: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Mi.mp3",
-    fileFa: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Fa.mp3",
-    fileSo: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSo.mp3",
-    fileLa: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/La.mp3",
+    music: {
+      fileLowSo: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSo.mp3",
+      fileLowSi: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSi.mp3",
+      fileDo: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Do.mp3",
+      fileRe: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Re.mp3",
+      fileMi: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Mi.mp3",
+      fileFa: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Fa.mp3",
+      fileSo: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSo.mp3",
+      fileLa: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/La.mp3",
+    }
   },
 
   onLoad: function (options) {
@@ -33,112 +45,128 @@ Page({
       speed: options.speed,
       chances: options.chances,
     })
-    wx.showToast({
+    wx.showLoading({
       title: '资源加载中',
-      icon: 'none',
-      duration: 5000,
     })
-    wx.cloud.downloadFile({
-      //url: that.data.fileLowSo,
-      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSo.mp3',
-      type: 'audio',
-      success: res =>  {
-        var tempFilePath = res.tempFilePath
-        that.setData({
-          fileLowSo: tempFilePath
-        })
-      },
-      fail: console.error
+    let downloadList = []
+    for(let item in this.data.music){
+      downloadList.push(new Promise((resolve, reject) => {
+          wx.cloud.downloadFile({
+            fileID: that.data.music[item],
+            success: res => {
+              let audio = wx.createInnerAudioContext()
+              audio.src = res.tempFilePath
+              audio.onPlay(() => {
+                console.log(item)
+              })
+              that.data.music[item] = audio,
+              resolve(res.tempFilePath)
+            }
+          })
+        }
+      ))
+    }
+    Promise.all(downloadList).then(res => {
+      wx.hideLoading()
+      console.log(this.data.music)
+      setTimeout(function () {
+          that.start()
+        }, 1500)
     })
-    wx.cloud.downloadFile({
-     // url: that.data.fileLowSi,
-     fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSi.mp3',
-      type: 'audio',
-      success: res =>{
-        var tempFilePath = res.tempFilePath
-        that.setData({
-          fileLowSi: tempFilePath
-        })
-      },
-      fail: console.error
-    })
-    wx.cloud.downloadFile({
-      //url: that.data.fileDo,
-      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Do.mp3',
-      type: 'audio',
-      success:res=> {
-        var tempFilePath = res.tempFilePath
-        that.setData({
-          fileDo: tempFilePath
-        })
-      },
-      fail: console.error
-    })
-    wx.cloud.downloadFile({
-      //url: that.data.fileRe,
-      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Re.mp3',
-      type: 'audio',
-      success:res=> {
-        var tempFilePath = res.tempFilePath
-        that.setData({
-          fileRe: tempFilePath
-        })
-      },
-      fail: console.error
-    })
-    wx.cloud.downloadFile({
-      //url: that.data.fileMi,
-      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Mi.mp3',
-      type: 'audio',
-      success:res=>{
-        var tempFilePath = res.tempFilePath
-        that.setData({
-          fileMi: tempFilePath
-        })
-      },
-      fail: console.error
-    })
-    wx.cloud.downloadFile({
-      //url: that.data.fileFa,
-      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Fa.mp3',
-      type: 'audio',
-      success:res=> {
-        var tempFilePath = res.tempFilePath
-        that.setData({
-          fileFa: tempFilePath
-        })
-      },
-      fail: console.error
-    })
-    wx.cloud.downloadFile({
-     fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/So.mp3',
-      type: 'audio',
-      success:res=> {
-        var tempFilePath = res.tempFilePath
-        that.setData({
-          fileSo: tempFilePath
-        })
-      },
-      fail: console.error
-    })
-    wx.cloud.downloadFile({
-      //url: that.data.fileLa,
-      fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/La.mp3',
-      type: 'audio',
-      success: res=> {
-        var tempFilePath = res.tempFilePath
-        that.setData({
-          fileLa: tempFilePath
-        })
-      },
-      fail: console.error
-    })
-    setTimeout(function () {
-      wx.hideToast()
-    }, 2000)
-    setTimeout(function () {
-      that.start()
-    }, 3000)
+    // wx.cloud.downloadFile({
+    //   fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSo.mp3',
+    //   type: 'audio',
+    //   success: res =>  {
+    //     var tempFilePath = res.tempFilePath
+    //     that.setData({
+    //       fileLowSo: tempFilePath
+    //     })
+    //   },
+    //   fail: console.error
+    // })
+    // wx.cloud.downloadFile({
+    //  fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/LowSi.mp3',
+    //   type: 'audio',
+    //   success: res =>{
+    //     var tempFilePath = res.tempFilePath
+    //     that.setData({
+    //       fileLowSi: tempFilePath
+    //     })
+    //   },
+    //   fail: console.error
+    // })
+    // wx.cloud.downloadFile({
+    //   fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Do.mp3',
+    //   type: 'audio',
+    //   success:res=> {
+    //     var tempFilePath = res.tempFilePath
+    //     that.setData({
+    //       fileDo: tempFilePath
+    //     })
+    //   },
+    //   fail: console.error
+    // })
+    // wx.cloud.downloadFile({
+    //   fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Re.mp3',
+    //   type: 'audio',
+    //   success:res=> {
+    //     var tempFilePath = res.tempFilePath
+    //     that.setData({
+    //       fileRe: tempFilePath
+    //     })
+    //   },
+    //   fail: console.error
+    // })
+    // wx.cloud.downloadFile({
+    //   fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Mi.mp3',
+    //   type: 'audio',
+    //   success:res=>{
+    //     var tempFilePath = res.tempFilePath
+    //     that.setData({
+    //       fileMi: tempFilePath
+    //     })
+    //   },
+    //   fail: console.error
+    // })
+    // wx.cloud.downloadFile({
+    //   fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/Fa.mp3',
+    //   type: 'audio',
+    //   success:res=> {
+    //     var tempFilePath = res.tempFilePath
+    //     that.setData({
+    //       fileFa: tempFilePath
+    //     })
+    //   },
+    //   fail: console.error
+    // })
+    // wx.cloud.downloadFile({
+    //  fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/So.mp3',
+    //   type: 'audio',
+    //   success:res=> {
+    //     var tempFilePath = res.tempFilePath
+    //     that.setData({
+    //       fileSo: tempFilePath
+    //     })
+    //   },
+    //   fail: console.error
+    // })
+    // wx.cloud.downloadFile({
+    //   fileID:'cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/loveNankai/La.mp3',
+    //   type: 'audio',
+    //   success: res=> {
+    //     var tempFilePath = res.tempFilePath
+    //     that.setData({
+    //       fileLa: tempFilePath
+    //     })
+    //   },
+    //   fail: console.error
+    // })
+    // setTimeout(function () {
+    //   wx.hideToast()
+    // }, 2000)
+    // setTimeout(function () {
+    //   that.start()
+    // }, 3000)
   },
 
   onHide: function () {
@@ -237,18 +265,19 @@ Page({
     for (var i = 0; i < arr.length; i++) {
       (function(i){
         var target = arr[i][0]
-        var data = {}
         var timerId = setTimeout(function () {
-          data[target] = "active"
-          that.setData(data)
+          that.setData({
+            [target]: 'active'
+          })
         }, timeout)
         timers.push(timerId)
         timeout += arr[i][1] * that.data.speed
         timerId = setTimeout(function () {
           if (that.data[target] == 'active') {
             if (that.data.chances == 0) {
-              data[target] = "inactive"
-              that.setData(data)
+              that.setData({
+                [target]: "inactive"
+              })
               for (var i = 0; i < timers.length; i++) {
                 clearTimeout(timers[i])
               }
@@ -257,8 +286,9 @@ Page({
               that.setData({
                 chances: that.data.chances - 1
               })
-              data[target] = "inactive"
-              that.setData(data)
+              that.setData({
+                [target]: "inactive"
+              })
             }
           }
         }, timeout)
@@ -277,13 +307,14 @@ Page({
     var that = this
     var id = e.currentTarget.id
     if (that.data[id] == 'active') {
-      var fileName = that.data['file' + id]
-      var audio = wx.createInnerAudioContext()
-      audio.src = fileName
-      audio.play()
-      var data = {}
-      data[id] = "inactive"
-      that.setData(data)
+      // var fileName = that.data.music['file' + id]
+      // var audio = wx.createInnerAudioContext()
+      // audio.src = fileName
+      // audio.play()
+      this.data.music['file' + id].play()
+      that.setData({
+        [id]: "inactive"
+      })
     }
   },
   

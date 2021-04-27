@@ -32,7 +32,10 @@ Page({
       button: "cloud://nankaituanwei-j5pm1.6e61-nankaituanwei-j5pm1-1257843133/resources/timeMachine/labor2019/button.png",
     }
   },
-  onLoad:async function(){
+  onLoad:function(){
+    wx.showLoading({
+      title: '资源加载中',
+    })
     //调用wx.getSystemInfo接口,获取屏幕大小
     var that = this;
     wx.cloud.downloadFile({
@@ -69,6 +72,7 @@ Page({
     }
     // 所有图片加载完再显示
     Promise.all(downloadList).then(res => {
+      wx.hideLoading()
       this.createAnimation()
     })
   },
