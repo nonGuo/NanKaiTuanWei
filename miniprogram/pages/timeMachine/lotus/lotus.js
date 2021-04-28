@@ -201,9 +201,7 @@ Page({
               icon: 'loading',
               duration: 10000,
             })
-            setTimeout(function() {
-              that.createNewImg();
-            }, 2000)
+            that.createNewImg();
             setTimeout(function() {
               wx.hideToast()
               that.setData({
@@ -212,10 +210,23 @@ Page({
             }, 5000)
           },
           fail: console.error
-        })  
+        })
+      },
+      fail: function(res) {
+        wx.showToast({
+          title: '正在绘图',
+          icon: 'loading',
+          duration: 10000,
+        })
+        that.createNewImg();
+        setTimeout(function() {
+          wx.hideToast()
+          that.setData({
+            showLotusHolder: true
+          });
+        }, 5000)
       }
     })
-
   },
   
 })
