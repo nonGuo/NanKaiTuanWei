@@ -178,48 +178,43 @@ Page({
   //获取授权并绘制
   getUserProfile: async function(e) { 
     var that = this
-    
-  wx.getUserProfile({
-    desc: '获取授权',
-    success: async function (res) {
-          wx.showToast({
-            title: '已获得头像',
-            icon: 'success',
-            duration: 5000,
-          })
-          that.setData({
-            name:res.userInfo.nickName,
-            avatar: res.userInfo.avatarUrl
-          })
-          wx.downloadFile({
-           url:res.userInfo.avatarUrl,
-           success: async function (res){
+    wx.getUserProfile({
+      desc: '获取授权',
+      success: async function (res) {
+        wx.showToast({
+          title: '已获得头像',
+          icon: 'success',
+          duration: 5000,
+        })
+        that.setData({
+          name:res.userInfo.nickName,
+          avatar: res.userInfo.avatarUrl
+        })
+        wx.downloadFile({
+          url:res.userInfo.avatarUrl,
+          success: async function (res){
+            that.setData({
+              avatar: res.tempFilePath
+            })
+            wx.showToast({
+              title: '正在绘图',
+              icon: 'loading',
+              duration: 10000,
+            })
+            setTimeout(function() {
+              that.createNewImg();
+            }, 2000)
+            setTimeout(function() {
+              wx.hideToast()
               that.setData({
-                avatar: res.tempFilePath
-              })
-            },
-            fail: console.error
-          })
-       
+                showLotusHolder: true
+              });
+            }, 5000)
+          },
+          fail: console.error
+        })  
       }
     })
-    
-
-
-    wx.showToast({
-      title: '正在绘图',
-      icon: 'loading',
-      duration: 10000,
-    })
-    setTimeout(function() {
-      that.createNewImg();
-    }, 2000)
-    setTimeout(function() {
-      wx.hideToast()
-      that.setData({
-        showLotusHolder: true
-      });
-    }, 5000)
 
   },
   
